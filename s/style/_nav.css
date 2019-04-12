@@ -1,0 +1,18 @@
+/***NAV***/
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#logo {
+  width: 15rem;
+}
+nav > a {
+  padding: 0.8rem 1.3rem;
+  display: inline-block;
+  text-decoration: none;
+}
+nav > a:hover, nav > a:focus {
+  text-decoration: underline;
+}

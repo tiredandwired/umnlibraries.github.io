@@ -1,0 +1,37 @@
+/*** TYPOGRAPHY ***/
+body {
+  font: 400 calc(1em + 1vw)/1.7 Tahoma, Verdana, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, Lucida Bright, serif;
+  text-shadow: 0.07em 0.07em 0 rgba(0,0,0,0.1);
+  margin: 0 0 0.7rem;
+}
+
+h1 {
+  font-size: calc(( var(--h1-min) * 1em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
+}
+
+blockquote {
+  font-family: Georgia, Lucida Bright, serif;
+  position: relative;
+}
+
+blockquote::before, blockquote::after {
+  font-size: 3rem;
+  position: absolute;
+  color: var(--col-text-light);
+}
+
+blockquote::before {
+  content: '\201C';
+  margin-left: -1.5rem;
+  top: -0.6rem;
+}
+
+blockquote::after {
+  content: '\201D';
+  bottom: -2.4rem;
+}

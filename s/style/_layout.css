@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  background-color: var(--col-secondary-hint);
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}

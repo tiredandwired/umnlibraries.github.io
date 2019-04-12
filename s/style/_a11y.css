@@ -1,0 +1,21 @@
+/***SKIP LINK***/
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  transition: top 1s ease-out,background .5s linear;
+  color: white;
+}
+
+.skip-link:focus {
+  right: auto;
+  background-color: #343a40;
+  color: white;
+  font-weight: 700;
+  left: 1.5rem;
+  padding: 1rem;
+  text-decoration: none;
+  border-bottom-left-radius: 0.188rem;
+  border-bottom-right-radius: 0.188rem;
+}
