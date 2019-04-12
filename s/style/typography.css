@@ -1,6 +1,7 @@
 /*** TYPOGRAPHY ***/
 body {
-  font: 400 calc(1em + 1vw)/1.7 Tahoma, Verdana, sans-serif;
+  /*font: 400 calc(1em + 1vw)/1.7 Tahoma, Verdana, sans-serif;*/
+  font: 400 1rem/1.7 Tahoma, Verdana, sans-serif;
   text-rendering: optimizeLegibility;
 }
 

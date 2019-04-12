@@ -1,7 +1,20 @@
 /***UTILITIES***/
+
+/*FLEX OPTIONS*/
 .row {
   flex-direction: row;
 }
 .column {
   flex-direction: column;
+}
+.oneline {
+  flex-wrap: nowrap;
+}
+
+/*BORDER*/
+.b {
+  border: 1px solid var(--col-text-light);
+}
+.b-0 {
+  border: 0;
 }

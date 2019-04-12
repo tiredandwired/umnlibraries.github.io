@@ -2,6 +2,9 @@ body {
   margin: 0;
   background-color: var(--col-secondary-hint);
 }
+main, footer {
+  padding: 1rem;
+}
 
 .column {
   flex-direction: column;
