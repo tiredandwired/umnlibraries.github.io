@@ -2,9 +2,11 @@
 a {
   color: var(--col-link);
   transition: all ease 0.5s;
+  padding: 0 0.3rem;
 }
 
 a:hover, a:focus {
-  background-color: var(--col-link-light);
-  color: var(--col-link-dark);
+  background-color: var(--col-link);
+  color: white;
+  border-radius: 0.3rem;
 }

@@ -8,6 +8,15 @@ nav {
 #logo {
   width: 15rem;
 }
+
+#logo path {
+  fill: var(--col-text-normal);
+}
+
+#logo:hover .svg-text path, #logo:focus .svg-text path {
+  fill: white;
+}
+
 nav > a {
   padding: 0.8rem 1.3rem;
   display: inline-block;
