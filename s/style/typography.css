@@ -36,3 +36,14 @@ blockquote::after {
   content: '\201D';
   bottom: -2.4rem;
 }
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #bfc1c3;
+  margin: 4rem 0;
+}
+
+
+.lead {
+  font-size: 1.25rem;
+}
