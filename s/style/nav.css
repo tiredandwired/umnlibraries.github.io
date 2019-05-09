@@ -25,3 +25,26 @@ nav > a {
 nav > a:hover, nav > a:focus {
   text-decoration: underline;
 }
+
+/*** Breadcrumb nav ***/
+nav[aria-label="Breadcrumb"] ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav[aria-label="Breadcrumb"] li {
+  display: inline-block;
+}
+nav[aria-label="Breadcrumb"] li:before {
+  content: "\2000";
+  position: absolute;
+}
+nav[aria-label="Breadcrumb"] li:not(:last-child):after {
+  content: "";
+  display: inline-block;
+  margin-left: 0.75ch;
+  margin-right: 0.5ch;
+  border-top: 0.75ch solid transparent;
+  border-bottom: 0.75ch solid transparent;
+  border-left: 0.75ch solid var(--col-text-normal);
+}
