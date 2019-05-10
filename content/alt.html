@@ -146,12 +146,12 @@
     <ol>
       <li><a href="/">Home</a></li>
       <li><a href="/content/">Content</a></li>
-      <li><a href="/content/index.html" aria-current="page">Overview</a></li>
+      <li><a href="/content/naming.html" aria-current="page">Alternative text</a></li>
     </ol>
   </nav>
   <nav aria-label="Content">
     <ul class="list-links">
-      <li><a href="/content/index.html" aria-current="page">Overview</a></li>
+      <li><a href="/content/index.html">Overview</a></li>
       <li><a href="/content/language.html">Language</a></li>
       <ul>
         <li><a href="/content/language.html#voice">Voice and tone</a></li>
@@ -177,19 +177,33 @@
         <li><a href="/content/grammar.html#slashes">Letters following slashes</a></li>
         <li><a href="/content/grammar.html#writing">Simplified writing</a></li>
       </ul>
-      <li><a href="/content/alt.html">Alternative text</a></li>
+      <li><a href="/content/alt.html" aria-current="page">Alternative text</a></li>
       <li><a href="/content/glossary.html">Glossary</a></li>
     </ul>
   </nav>
   <main id="main">
+
     <article>
-      <h1>Overview</h1>
-      <p class="lead">Thoughtful, consistent interface content is a core element of a well-designed user experience.</p>
+      <h1>Alternative text</h1>
+      <p>Alternative text, or alt text, is necessary for screen readers to “describe” images, so the content is accessible to people with impaired vision, or people that have disabled images for cognitive impairments or data limitations. Alt text needs to be as brief yet meaningful as possible given the surrounding text, rather than just a filename, for example.</p>
 
-      <p>If you create or maintain any content on the web, you are a designer of user experiences. It is in your hands to take on the responsibility that carries.</p>
+      <p>Avoid any redundancy; those who have to listen to the web all day can hear a lot of unnecessary repetition. If the image contains something the surrounding text doesn’t convey, describe it in the alt attribute.</p>
 
-      <p>The content guidelines will help understand how to think strategically about the language used to convey messages. They provide clear, tactical suggestions designed to help use language to craft better experiences.</p>
+      <p>If the text included in the alt attribute benefits other people, use a visible text option such as a wrapping <code>&lt;figure&gt;</code> with accompanying <code>&lt;figcaption&gt;</code>.</p>
 
+      <p>In cases where the accompanying text already directly mirrors the content of the image, the alt text should be left blank, so that it isn&rsquo;t duplicated.</p>
+
+      <p>Avoid starting alt text with &ldquo;This is an image of&rdquo;, &ldquo;Photo&rdquo; or &ldquo;Photo of&rdquo;, &ldquo;A view of&rdquo;, &ldquo;You see&rdquo;, &ldquo;Screenshot of&rdquo;, or &ldquo;Thumbnail&rdquo;.</p>
+
+      <p>Use the <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" class="ext-site">alt decision tree</a> to determine how to write alt text.</p>
+
+      <h2>Example</h2>
+      <p>&ldquo;PNRs304.jpg&rdquo; (no)<br />
+        vs.<br />
+        &ldquo;Screenshot from Parks and Rec.&rdquo; (better)<br />
+        vs.<br />
+        &ldquo;&rdquo; (empty alt attribute) with a <code>&lt;figcaption&gt; element including the text: A self-referential screencap from Parks &amp; Recreation, showing character Tom Haverford looking at an uncaptioned photo of himself. The subtitle reads, &ldquo;What is he thinking?&rdquo; (yes)
+      </p>
     </article>
 
   </main>

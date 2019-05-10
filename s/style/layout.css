@@ -13,3 +13,24 @@ main, footer {
 .row {
   flex-direction: row;
 }
+
+
+/*** LEFT NAV ***/
+body, main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header, footer {
+  width: 100%;
+}
+
+body > nav, aside {
+  flex-basis: 20rem;
+  flex-grow: 1;
+}
+
+main {
+  min-width: 50%;
+  flex-grow: 100;
+}
