@@ -27,18 +27,25 @@ nav > a:hover, nav > a:focus {
 }
 
 /*** Breadcrumb nav ***/
+nav[aria-label="Breadcrumb"] {
+  flex-basis: 100%;
+}
+
 nav[aria-label="Breadcrumb"] ol {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 nav[aria-label="Breadcrumb"] li {
   display: inline-block;
 }
+
 nav[aria-label="Breadcrumb"] li:before {
   content: "\2000";
   position: absolute;
 }
+
 nav[aria-label="Breadcrumb"] li:not(:last-child):after {
   content: "";
   display: inline-block;

@@ -25,12 +25,12 @@ header, footer {
   width: 100%;
 }
 
-body > nav.nav-sub, aside {
+body > nav, aside {
   flex-basis: 20rem;
   flex-grow: 1;
 }
 
-nav.nav-sub + main {
+nav + main {
   min-width: 50%;
   flex-grow: 100;
 }

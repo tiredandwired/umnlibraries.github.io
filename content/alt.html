@@ -23,7 +23,7 @@
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header>
-    <nav role="navigation">
+    <nav role="navigation" aria-label="Main">
       <a href="/" id="logo">
         <svg viewBox="0 0 1144.503 161">
           <g class="svg-text">
@@ -141,15 +141,18 @@
         </svg>
         Patterns</a>
     </nav>
+
+    <nav role="navigation" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/content/">Content</a></li>
+        <li><a href="/content/naming.html" aria-current="page">Alternative text</a></li>
+      </ol>
+    </nav>
+
   </header>
-  <nav aria-label="Breadcrumb">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li><a href="/content/">Content</a></li>
-      <li><a href="/content/naming.html" aria-current="page">Alternative text</a></li>
-    </ol>
-  </nav>
-  <nav aria-label="Content" class="nav-sub">
+
+  <nav role="navigation" aria-label="Content" class="nav-sub">
     <ul class="list-links">
       <li><a href="/content/index.html">Overview</a></li>
       <li><a href="/content/language.html">Language</a></li>
