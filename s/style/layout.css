@@ -31,7 +31,6 @@ header, footer {
 
 body > nav, aside {
   flex-basis: 20rem;
-  /*flex-grow: 1;*/
   flex: 1 0 0;
 }
 
@@ -39,4 +38,13 @@ nav + main {
   min-width: 50%;
   flex: 3 0px;
   /*flex-grow: 100;*/
+}
+@media (min-width:50rem) {
+  main {
+    order: 1;
+    flex: 1 0 0;
+  }
+  body > nav {
+    order: 2;
+  }
 }
