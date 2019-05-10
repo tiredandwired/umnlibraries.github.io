@@ -34,6 +34,10 @@ nav > a:hover, nav > a:focus {
   text-decoration: underline;
 }
 
+nav[aria-label="Main"] > a {
+  border-bottom: 5px solid;
+}
+
 /*** Breadcrumb nav ***/
 nav[aria-label="Breadcrumb"] {
   flex-basis: 100%;
