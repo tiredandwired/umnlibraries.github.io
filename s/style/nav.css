@@ -13,6 +13,14 @@ nav {
   fill: var(--col-text-normal);
 }
 
+#logo .svg-m path {
+  fill: var(--col-primary-normal);
+}
+
+#logo:hover .svg-m path, #logo:focus .svg-m path {
+  fill: var(--col-secondary-light);
+}
+
 #logo:hover .svg-text path, #logo:focus .svg-text path {
   fill: white;
 }
