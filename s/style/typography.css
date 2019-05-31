@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
+article > h2, article > h3 {
+  border-bottom: 1px solid;
+}
+
 h1 {
   font-size: calc(( var(--h1-min) * 1em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
 }
@@ -45,7 +49,20 @@ hr {
   margin: 4rem 0;
 }
 
-
 .lead {
   font-size: 150%;
+  background-color: var(--col-bg-light);
+  padding: 0.5rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 0.3rem 0;
+}
+
+dt:not(:first-child) {
+  margin-top: 1rem;
 }

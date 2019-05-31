@@ -26,6 +26,9 @@
   --col-text-normal: #333;
   --col-text-light: #666;
 
+  --col-bg-light: #fafafa;
+  --col-bg-medium: #ddd;
+
   /* spacing - bottom oriented */
   --m-norm: 0.7;
   --m-min: 0.3;

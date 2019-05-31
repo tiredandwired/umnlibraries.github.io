@@ -34,8 +34,29 @@ nav > a:hover, nav > a:focus {
   text-decoration: underline;
 }
 
-nav[aria-label="Main"] > a[aria-current="page"] {
-  border-bottom: 5px solid;
+nav[aria-label="Main"] > a:hover::after,
+nav[aria-label="Main"] > a:focus::after {
+  content: "";
+  display: block;
+  width: 0.25rem;
+  height: 100%;
+  background-color: var(--col-bg-medium);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+nav[aria-label="Main"] > a[aria-current="page"]::after,
+nav[aria-label="Main"] > a[aria-current="page"]:hover::after,
+nav[aria-label="Main"] > a[aria-current="page"]:focus::after {
+  content: "";
+  display: block;
+  width: 0.25rem;
+  height: 100%;
+  background-color: var(--col-link);
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 /*** Breadcrumb nav ***/

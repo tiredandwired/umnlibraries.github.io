@@ -46,6 +46,11 @@ nav + main {
   flex: 3 0px;
   /*flex-grow: 100;*/
 }
+
+article {
+  margin-bottom: 1rem;
+}
+
 @media (max-width:50rem) {
   main {
     order: 1;
