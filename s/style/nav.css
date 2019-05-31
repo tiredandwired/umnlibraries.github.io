@@ -26,16 +26,31 @@ nav {
 }
 
 nav > a {
-  padding: 0.8rem 1.3rem;
+  padding: 1rem 1.25rem;
   display: inline-block;
   text-decoration: none;
+  position: relative;
 }
 nav > a:hover, nav > a:focus {
   text-decoration: underline;
 }
 
+nav[aria-label="Main"], .nav-hor {
+  display: flex;
+}
+
+nav[aria-label="Main"] > a, .nav-hor > a {
+  flex-shrink: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  border: 0;
+}
+
 nav[aria-label="Main"] > a:hover::after,
-nav[aria-label="Main"] > a:focus::after {
+nav[aria-label="Main"] > a:focus::after,
+.nav-hor > a:hover::after,
+.nav-hor > a:focus::after {
   content: "";
   display: block;
   width: 0.25rem;
