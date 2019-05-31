@@ -20,6 +20,19 @@
   border-bottom-right-radius: 0.188rem;
 }
 
+/*Joe Watkin solution*/
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto; /* new - was 1px */
+    margin: 0; /* new - was -1px */
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
 /*** REDUCED MOTION ***/
 @media screen and
   (prefers-reduced-motion: reduce),
