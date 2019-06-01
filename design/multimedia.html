@@ -189,6 +189,51 @@
   <main id="main">
 
     <h1>Multimedia</h1>
+    <p>Do not embed auto playing multimedia with either audio or visual components. All multimedia objects require the person to opt in by manually selecting a play button or other engagement element that clearly defines the behavior being initiated. All controls must be properly labeled and ARIA accurately represent its current state.</p>
+
+    <p>All video must include captions with at least 99% accuracy. Auto captioning services alone do not meet this requirement. Captions support all users, but are specifically necessary for people who are hard of hearing.</p>
+
+    <p>To support people who are visually impaired, audio description must accurately represent the content visually presented for the person have the ability to derive the same meaning from the video content. If the visual content is dense, create a second version of the video with extended audio description that would otherwise be disruptive to other people.</p>
+
+    <p>All audio must include transcription using HTML format. This supports all people, including those who prefer to read, but especially those who cannot easily hear. With the transcription in HTML, the content also gets an SEO boost, so it can more easily be found through search engines.</p>
+
+    <article id="caption">
+      <h2>Captions</h2>
+      <p>Captions are visible, and the text is not italicized to improve readability. To distinguish it from surrounding text, both the image and caption are centered on the page if not full width, and the caption has a 90% size.</p>
+      <ul>
+        <li>Adding captions optimizes search results as well as accessibility.</li>
+        <li>The caption adds context to the image, not just duplicates what the reader already sees.</li>
+        <li>Captions are written in complete sentences with who, what, where, when and (sometimes) why.</li>
+        <li>Target length for captions is no more than two short sentences.</li>
+        <li>Acknowledge the person who took the photo or the image source. Use the following syntax for acknowledgement: &ldquo;Photo courtesy of [x].&rdquo;</li>
+      </ul>
+
+      <p><a href="https://www.scottohara.me/blog/2019/01/21/how-do-you-figure.html" class="ext-site">Captions are not a substitute for alt text</a>. &ldqou;If an image is given an empty alt, then the <code>&lt;figcaption&gt;</code> is in effect describing nothing. And that doesn&rsquo;t make much sense, does it?&rdquo;  When <code>&lt;figure&gt;</code> is used, alt text is required (no empty attribute).</p>
+
+      <h2>Decorative images</h2>
+      <p>Decorative images are used sparingly because they serve little purpose and lead to a less optimized web page (load time and weight will increase).</p>
+      <p>Where an image&rsquo;s presence on the page does not enhance the purpose of the page&rsquo;s content yet needs to be on the web page, include an empty alt attribute on the image and hide it from screen readers. The superfluous text on a decorative image detracts from a screen reader user&rsquo;s experience, whose goal is to complete a task.</p>
+
+      <p>These images are marked up thusly:</p>
+      <pre><code>
+        &lt;picture aria-hidden="true"&gt;
+          &lt;source type="image/webp" srcset="map.webp" /&gt;
+          &lt;img src="map.jpg" alt="" /&gt;
+        &lt;/picture&gt;
+      </code></pre>
+      <p>Where the image is accompanying a headline, such as a news article brieflet linking to a full article, use the following pattern:</p>
+
+      <pre><code>
+        &lt;a href="/article-2"&gt;
+          &lt;picture aria-hidden="true"&gt;
+            &lt;source type="image/webp" srcset="map.webp" /&gt;
+            &lt;img src="map.jpg" alt="" /&gt;
+          &lt;/picture&gt;
+          &lt;h3&gt;Story heading&lt;/h3&gt;
+        &lt;/a&gt;
+      </code></pre>
+
+
 
   </main>
 

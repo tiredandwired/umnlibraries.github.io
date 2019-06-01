@@ -190,6 +190,285 @@
 
     <h1>Imagery</h1>
 
+    <article id="photo">
+      <h2>Photos</h2>
+      <p>Use images sparingly. Much of the bloat on the web is from images. Often they are not optimized or delivered in the wrong format. In many cases they do not serve any purpose, or are used to break up text where whitespace isn&rsquo;t well utilized or the content isn&rsquo;t formatted well.</p>
+
+      <p>Look skeptically at each use of an image to determine its purpose. If it does fulfill a purpose, use the follow steps to ensure it is as optimized as possible to cause the least impact on performance.</p>
+
+      <p>[more]</p>
+
+      <p>Photography is best delivered in optimized progressive JPG format. All images are also delivered in WebP format.</p>
+
+      <p>Every image should have a caption, which <code>&lt;figure&gt;</code> with <code>&lt;figcaption&gt;</code> is best for. However, because two formats are delivered, embed <code>&lt;picture&gt;</code> inside the <code>&lt;figure&gt;</code> element.</p>
+
+      <pre><code>
+        &lt;figure role="figure"&gt;
+          &lt;picture&gt;
+            &lt;source type="image/webp" srcset="map.webp" /&gt;
+            &lt;img src="map.jpg" alt="Map" /&gt;
+          &lt;/picture&gt;
+          &lt;figcaption&gt;A map of Minneapolis from 1830.&lt;/figcaption&gt;
+        &lt;/figure&gt;
+      </code></pre>
+
+      <h3>Optimizing photographs</h3>
+      <p>Use a graphic editor of choice, these steps are written specifically through Photoshop but is possible in most editors.</p>
+      <ol>
+        <li>Change the DPI to 120</li>
+        <li>Modify width to equal the desktop-sized version of the image (no larger than 750px)</li>
+        <li>For images that aren&rsquo;t archival or where color is not critical, change to black and white</li>
+        <li>Reduce contrast (contrast filters are applied in CSS to bring contrast back)</li>
+        <li>If the image has a central focal point (portrait or building), blur the edges</li>
+        <li>Save as a JPG format at &ldquo;8&rdquo; high quality</li>
+        <li>Optimize the JPG file by loading it in <a href="kraken.io" class="ext-site">Kraken</a> and saving the optimized version</li>
+        <li>Save a WebP copy of the JPG file at <a href="https://webp-converter.com" class="ext-site">Web Converter</a></li>
+      </ol>
+    </article>
+
+    <article id="illustrations">
+      <h2>Illustrations</h2>
+      <p>All illustrations should be made with <acronym>SVG</acronym> (scalable vector graphic), avoiding the <acronym>SVG</acronym> wrapper around an image for vector <acronym>SVG</acronym>. <acronym>SVG</acronym> can be referenced in multiple ways:</p>
+      <dl>
+        <dt>External reference</dt>
+        <dd>Calling an <acronym>SVG</acronym> as an external object like a <acronym>JPG</acronym> is the most supported option but also the most limiting for modifications such as changing colors on focus. Because it is a source pointer, it&rsquo;s a resource request requiring a server fetch as well, which may cost in speed.</dd>
+        <dd><code>&lt;img src="cancel.svg" alt="Cancel" /&gt;</code></dd>
+
+        <dt><acronym>SVG</acronym> sprites</dt>
+        <dd>These are most useful for icons that are expected to repeat multiple times per web page. For instance, on a staff directory page where phone and email content has repeating iconography. Add a hidden list of <acronym>SVG</acronym> symbols on the page:
+          <pre><code>
+            &lt;svg&gt;
+              &lt;defs&gt;
+                &lt;symbol id="glyph-cancel"&gt;...&lt;/symbol&gt;
+              &lt;/defs&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          Then within the document content refer to the symbols:
+          <pre><code>
+            &lt;svg vewBox="0 0 30 30"&gt;
+              &lt;use xlink:href="glyph-cancel"&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+          </code></pre>
+        </dd>
+        <dd>The <acronym>SVG</acronym> definition list is best inside the <code>&lt;footer role="contentinfo"&gt;</code>, in a <code>&lt;div hidden="hidden"&gt;element that contains several shared hidden assets.</dd>
+
+        <dt>Embedded</dt>
+        <dd>
+          <pre><code>
+            &lt;svg viewBox="0 0 30 30"&gt;
+              &lt;path d="..." /&gt;
+            &lt;/svg&gt;
+          </code></pre>
+        </dd>
+      </dl>
+      <p>The best approach is to use a combination primarily of <acronym>SVG</acronym> sprites and embedded <acronym>SVG</acronym>.</p>
+    </article>
+
+    <article id="icons">
+      <h2>Iconography</h2>
+      <p>All icons are <acronym>SVG</acronym> formatted and embedded into the <acronym>HTML</acronym>.  This allows <acronym>CSS</acronym> styling and <acronym>JS</acronym> mutations.</p>
+      <p>Icons that are used purely to enhance content where the content makes sense without the icon is decorative. Decorative content does not read to screen readers.</p>
+
+      <pre><code>
+        &lt;svg aria-hidden="true" class="glyph" focusable="false" viewBox="0 0 30 30"&gt;
+          &lt;path d="..." /&gt;
+        &lt;/svg&gt;
+      </code></pre>
+
+      <h2>Available icons</h2>
+      <p>Use these icons to present a consistent style. Icons avoid thin or outline styles so they are clearly visible.</p>
+      <ul class="flex-square">
+        <li>
+          <h3>angle-circled-right</h3>
+          <p>*for main nav links</p>
+        </li>
+        <li>
+          <h3>angle-circled-up</h3>
+        </li>
+        <li>
+          <h3>attention</h3>
+          <p>*for alerts</p>
+        </li>
+        <li>
+          <h3>calendar</h3>
+          <p>*for events</p>
+        </li>
+        <li>
+          <h3>cancel</h3>
+          <p>*for close action</p>
+        </li>
+        <li>
+          <h3>chat-empty</h3>
+          <p>*for 24/7 chat</p>
+        </li>
+        <li>
+          <h3>check</h3>
+        </li>
+        <li>
+          <h3>checked</h3>
+        </li>
+        <li>
+          <h3>clock</h3>
+          <p>*for time/hours</p>
+        </li>
+        <li>
+          <h3>cog</h3>
+          <p>*for settings/edit</p>
+        </li>
+        <li>
+          <h3>comment</h3>
+        </li>
+        <li>
+          <h3>down-open</h3>
+          <p>*for accordions</p>
+        </li>
+        <li>
+          <h3>facebook-squared</h3>
+          <p>*for social media link</p>
+        </li>
+        <li>
+          <h3>gift</h3>
+          <p>*for giving link</p>
+        </li>
+        <li>
+          <h3>help-circled</h3>
+          <p>*for tooltips</p>
+        </li>
+        <li>
+          <h3>home</h3>
+          <p>*for homepage link</p>
+        </li>
+        <li>
+          <h3>info-circled</h3>
+          <p>*for tooltips</p>
+        </li>
+        <li>
+          <h3>instagram</h3>
+          <p>*for social media link</p>
+        </li>
+        <li>
+          <h3>lightbulb</h3>
+        </li>
+        <li>
+          <h3>like</h3>
+        </li>
+        <li>
+          <h3>link-ext</h3>
+          <p>*for external links</p>
+        </li>
+        <li>
+          <h3>link</h3>
+          <p>*for links</p>
+        </li>
+        <li>
+          <h3>location</h3>
+          <p>*for directions/map</p>
+        </li>
+        <li>
+          <h3>lock-open</h3>
+        </li>
+        <li>
+          <h3>lock</h3>
+          <p>*for auth required</p>
+        </li>
+        <li>
+          <h3>mail</h3>
+          <p>*for email links</p>
+        </li>
+        <li>
+          <h3>menu</h3>
+          <p>*for mobile nav</p>
+        </li>
+        <li>
+          <h3>mobile</h3>
+        </li>
+        <li>
+          <h3>newspaper</h3>
+        </li>
+        <li>
+          <h3>paper-plane</h3>
+        </li>
+        <li>
+          <h3>phone</h3>
+          <p>*tel number link</p>
+        </li>
+        <li>
+          <h3>pinterest-squared</h3>
+          <p>*for social media link</p>
+        </li>
+        <li>
+          <h3>plus-squared</h3>
+          <p>*for social media link</p>
+        </li>
+        <li>
+          <h3>right-open</h3>
+          <p>*for accordion</p>
+        </li>
+        <li>
+          <h3>rocket</h3>
+          <p>*for auto suggestions</p>
+        </li>
+        <li>
+          <h3>search</h3>
+          <p>*for search buttons</p>
+        </li>
+        <li>
+          <h3>space-shuttle</h3>
+        </li>
+        <li>
+          <h3>trash</h3>
+        </li>
+        <li>
+          <h3>twitter-squared</h3>
+          <p>*for social media link</p>
+        </li>
+        <li>
+          <h3>user</h3>
+        </li>
+        <li>
+          <h3>users</h3>
+        </li>
+        <li>
+          <h3>youtube-play</h3>
+          <p>*for video play button</p>
+        </li>
+        <li>
+          <h3>youtube-squared</h3>
+          <p>*for social media link</p>
+        </li>
+        <li>
+          <h3>zoom-in</h3>
+          <p>*for &ldquo;enlarge&rdquo; action</p>
+        </li>
+        <li>
+          <h3>service-account</h3>
+          <p>*for My Account</p>
+        </li>
+        <li>
+          <h3>service-guides</h3>
+          <p>*for Library Guides</p>
+        </li>
+        <li>
+          <h3>service-ill</h3>
+          <p>*for Interlibrary Loan</p>
+        </li>
+        <li>
+          <h3>service-reserves</h3>
+          <p>*for Course Reserves</p>
+        </li>
+        <li>
+          <h3>service-study</h3>
+          <p>*for Group Study</p>
+        </li>
+        <li>
+          <h3>service-tutoring</h3>
+          <p>*for Tutoring</p>
+        </li>
+      </ul>
+
+    </article>
+
+
   </main>
 
   <footer>
