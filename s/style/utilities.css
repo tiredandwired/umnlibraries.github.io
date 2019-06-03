@@ -27,6 +27,7 @@
 
 .flex-square code {
   display: block;
+  background-color: transparent;
 }
 
 /* BORDER */
