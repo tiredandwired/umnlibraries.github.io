@@ -23,11 +23,12 @@
   --col-link-light: #5699dc;
   --col-link-dark: #002d61;
 
-  --col-text-normal: #333;
-  --col-text-light: #666;
+  --col-text: #333;
+  --col-text-light: #5a5a5a;
 
   --col-bg-light: #fafafa;
-  --col-bg-medium: #ddd;
+  --col-bg-medium: #f0efee;
+  --
 
   /* spacing - bottom oriented */
   --m-norm: 0.7;
