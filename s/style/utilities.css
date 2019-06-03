@@ -20,8 +20,13 @@
 .flex-square li {
   min-width: 5rem;
   max-width: 15rem;
-  padding: 0.4rem;
-  margin: 0 0.5rem 0.5rem 0;
+  padding: 1rem;
+  margin: 0 1rem 1rem 0;
+  border:1px solid;
+}
+
+.flex-square code {
+  display: block;
 }
 
 /* BORDER */
@@ -71,7 +76,7 @@
 
 .c-secondary-light {
   background-color: var(--col-secondary-light);
-  color: #fff;
+  color: var(--col-text);
 }
 
 .c-secondary-light-text {
@@ -119,8 +124,7 @@
 }
 
 .c-text-light {
-  background-color: var(--col-text-light);
-  color: #333;
+  color: var(--col-text-light);
 }
 
 .c-bg-light {
