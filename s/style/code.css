@@ -13,6 +13,11 @@ pre.code {
   overflow: auto;
   text-shadow: none;
   white-space: pre-wrap;
+  margin-bottom: calc( var(--m-norm) * 1rem);
+}
+
+pre.code code {
+  background-color: transparent;
 }
 
 code .nt {
