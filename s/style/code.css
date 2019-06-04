@@ -9,7 +9,7 @@ pre.code {
   background-color: #030406;
   color: var(--col-bg-light);
   border: 1px solid var(--col-bg-medium);
-  padding: 1rem;
+  padding: 0 1rem;
   overflow: auto;
   text-shadow: none;
   white-space: pre-wrap;
