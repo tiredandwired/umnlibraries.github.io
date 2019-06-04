@@ -202,10 +202,10 @@
 
       <p>Every image should have a caption, which <code>&lt;figure&gt;</code> with <code>&lt;figcaption&gt;</code> is best for. However, because two formats are delivered, embed <code>&lt;picture&gt;</code> inside the <code>&lt;figure&gt;</code> element.</p>
 
-      <pre><code>
-<span class="nt">&lt;figure</span> <span class="na"role=</span><span class="s">"figure"</span><span class="nt">&gt;</span>
+      <pre class="code"><code>
+<span class="nt">&lt;figure</span> <span class="na">role=</span><span class="s">"figure"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;picture&gt;</span>
-    <span class="nt"&lt;source</span> <span class="na"type=</span><span class="s">"image/webp"</span> <span class="na">srcset=</span><span class="s">"map.webp"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">type=</span><span class="s">"image/webp"</span> <span class="na">srcset=</span><span class="s">"map.webp"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"map.jpg"</span> <span class="na">alt=</span><span class="s">"Map"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/picture&gt;</span>
   <span class="nt">&lt;figcaption&gt;</span>A map of Minneapolis from 1830.<span class="nt">&lt;/figcaption&gt;</span>
@@ -236,7 +236,7 @@
 
         <dt><acronym>SVG</acronym> sprites</dt>
         <dd>These are most useful for icons that are expected to repeat multiple times per web page. For instance, on a staff directory page where phone and email content has repeating iconography. Add a hidden list of <acronym>SVG</acronym> symbols on the page:
-          <pre><code>
+          <pre class="code"><code>
 <span class="nt">&lt;svg&gt;</span>
   <span class="nt">&lt;defs&gt;</span>
     <span class="nt">&lt;symbol</span> <span class="na">id=</span><span class="s">"glyph-cancel"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/symbol&gt;</span>
@@ -244,17 +244,17 @@
 <span class="nt">&lt;/svg&gt;</span>
           </code></pre>
           Then within the document content refer to the symbols:
-          <pre><code>
+          <pre class="code"><code>
 <span class="nt">&lt;svg</span> <span class="na">viewBox=</span><span class="s">"0 0 30 30"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;use</span> <span class="na">xlink:href=</span>"glyph-cancel"&gt;&lt;/use&gt;
-&lt;/svg&gt;
+  <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"glyph-cancel"</span> <span class="nt">&lt;/use&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
           </code></pre>
         </dd>
         <dd>The <acronym>SVG</acronym> definition list is best inside the <code>&lt;footer role="contentinfo"&gt;</code>, in a <code>&lt;div hidden="hidden"&gt;</code>element that contains several shared hidden assets.</dd>
 
         <dt>Embedded</dt>
         <dd>
-          <pre><code>
+          <pre class="code"><code>
 <span class="nt">&lt;svg</span> <span class="na">viewBox=</span><span class="s">"0 0 30 30"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;path</span> <span class="na">d="</span>...<span class="na">"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/svg&gt;</span>
@@ -269,7 +269,7 @@
       <p>All icons are <acronym>SVG</acronym> formatted and embedded into the <acronym>HTML</acronym>.  This allows <acronym>CSS</acronym> styling and <acronym>JS</acronym> mutations.</p>
       <p>Icons that are used purely to enhance content where the content makes sense without the icon is decorative. Decorative content does not read to screen readers.</p>
 
-      <pre><code>
+      <pre class="code"><code>
 <span class="nt">&lt;svg</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"glyph"</span> <span class="na">focusable=</span><span class="s">"false"</span> <span class="na">viewBox=</span><span class="s">"0 0 30 30"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;path</span> <span class="na">d="</span>...<span class="na">"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/svg&gt;</span>
