@@ -18,23 +18,34 @@
 }
 
 .flex-square li {
-  min-width: 5rem;
-  max-width: 15rem;
-  width: 10rem;
-  height: 10rem;
   padding: 1rem;
   margin: 0 1rem 1rem 0;
   border:1px solid;
 }
 
+.square li {
+  min-width: 5rem;
+  max-width: 15rem;
+}
+
+.square-sm li {
+  width: 10rem;
+  height: 10rem;
+}
+
+.square-md li {
+  width: 15rem;
+  height: 15rem;
+}
+
 .flex-square svg.glyph {
-  height: 2rem;
-  width: 2rem;
+  height: 5vw;
+  width: 5vw;
   display: block;
   margin: auto;
 }
 
-.fex-square h3 {
+.flex-square h3 {
   min-height: 2rem;
 }
 

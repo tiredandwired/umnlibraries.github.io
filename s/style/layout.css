@@ -53,7 +53,7 @@ nav + main {
 }
 
 article {
-  margin-bottom: 1rem;
+  margin-bottom: calc(var(--m-norm) * 1rem);
 }
 
 @media (max-width:50rem) {

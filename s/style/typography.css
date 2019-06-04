@@ -3,7 +3,7 @@ body {
   /*font: 400 calc(1em + 1vw)/1.7 Tahoma, Verdana, sans-serif;*/
   font: 400 1rem/1.5 Tahoma, Verdana, sans-serif;
   text-rendering: optimizeLegibility;
-  color: var(--col-text-normal);
+  color: var(--col-text);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,6 +24,7 @@ h1 {
 blockquote {
   font-family: Georgia, Lucida Bright, serif;
   position: relative;
+  margin-bottom: calc(var(--m-norm) * 1rem);
 }
 
 blockquote::before, blockquote::after {
@@ -53,6 +54,7 @@ hr {
   font-size: 150%;
   background-color: var(--col-bg-light);
   padding: 0.5rem;
+  margin-bottom: calc(var(--m-norm) * 1rem);
 }
 
 dt {

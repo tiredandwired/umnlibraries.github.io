@@ -48,6 +48,10 @@ nav[aria-label="Main"], .nav-hor {
   border: 0;
 }*/
 
+nav[aria-label="Main"] > a {
+  border-radius: 0;
+}
+
 nav[aria-label="Main"] > a:hover::after,
 nav[aria-label="Main"] > a:focus::after,
 .nav-hor > a:hover::after,
@@ -102,5 +106,5 @@ nav[aria-label="Breadcrumb"] li:not(:last-child):after {
   margin-right: 0.5ch;
   border-top: 0.75ch solid transparent;
   border-bottom: 0.75ch solid transparent;
-  border-left: 0.75ch solid var(--col-text-normal);
+  border-left: 0.75ch solid var(--col-text);
 }
