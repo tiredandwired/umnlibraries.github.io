@@ -34,6 +34,10 @@
   margin: auto;
 }
 
+.fex-square h3 {
+  min-height: 2rem;
+}
+
 .flex-square code {
   display: block;
   background-color: transparent;
