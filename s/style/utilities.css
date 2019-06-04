@@ -20,9 +20,18 @@
 .flex-square li {
   min-width: 5rem;
   max-width: 15rem;
+  width: 10rem;
+  height: 10rem;
   padding: 1rem;
   margin: 0 1rem 1rem 0;
   border:1px solid;
+}
+
+.flex-square svg.glyph {
+  height: 2rem;
+  width: 2rem;
+  display: block;
+  margin: auto;
 }
 
 .flex-square code {
