@@ -1,0 +1,32 @@
+code {
+  font-size: 1.2rem;
+  background-color: var(--col-bg-medium);
+  display: inline-block;
+  padding: 0 0.1rem;
+}
+
+pre + code {
+  background-color: #030406;
+  color: var(--col-bg-light);
+  border: 1px solid var(--col-bg-medium);
+  padding: 1rem;
+  overflow: auto;
+  text-shadow: none;
+  white-space: pre-wrap;
+}
+
+code .nt {
+  color: #f92672;
+}
+
+code .na {
+  color: #a6e22e;
+}
+
+code .s {
+  color: #e6db74;
+}
+
+code .c {
+  color: #86816b;
+}
