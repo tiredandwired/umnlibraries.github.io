@@ -191,20 +191,24 @@
     <article>
       <h1>Content sections</h1>
       <p>For pages with significant text and multiple groups of content, consider using a horizontal break to add visual break.</p>
+      <h2>Example</h2>
       <pre>
-        <p>This is the last paragraph about a completely different theme.</p>
-        <hr />
-        <h3>New theme</h3>
-        <p>Describe this new item.</p>
+<p>This is the last paragraph about a completely different theme.</p>
+<hr />
+<h3>New theme</h3>
+<p>Describe this new item.</p>
       </pre>
 
-      <pre><code>
-        hr {
-          border: 0;
-          border-bottom: 1px solid #bfc1c3;
-          margin: 4rem 0;
-        }
-      </code></pre>
+      <h2>CSS</h2>
+      <pre class="code">
+        <code>
+<span class="cs">hr</span> <span class="p">{</span>
+  <span class="cp">border</span><span class="p">:</span> <span class="cv">0</span><span class="p">;</span>
+  <span class="cp">border-bottom</span><span class="p">:</span> <span class="cv">1px solid var(--col-secondary-dark)</span><span class="p">;</span>
+  <span class="cp">margin</span><span class="p">:</span> <span class="cv">calc( var(--m-norm) * 1rem) 0</span><span class="p">;</span>
+<span class="p">}</span>
+        </code>
+      </pre>
     </article>
 
 

@@ -40,10 +40,11 @@ thead th, tfoot tr {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-th:last-child,
+/* needs to apply to numerical content */
+/*th:last-child,
 td:last-child {
   text-align: right;
-}
+}*/
 
 @media screen and (max-width: 37em) {
  table, caption, thead, thead tr, thead th, tbody, tbody tr, tbody th, tbody td, th:last-child, td:last-child, tfoot {

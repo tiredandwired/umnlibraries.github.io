@@ -20,18 +20,47 @@ pre.code code {
   background-color: transparent;
 }
 
+/* new tag */
 code .nt {
   color: #f92672;
 }
 
+/* new attribute */
 code .na {
   color: #a6e22e;
 }
 
+/* source */
 code .s {
   color: #e6db74;
 }
 
+/* comments */
 code .c {
   color: #86816b;
+}
+
+/* css selector */
+code .cs {
+  color :#a6e22e;
+}
+
+/* code punctuation */
+code .p {
+  color: #f8f8f2;
+}
+
+/* selector type, class/id */
+code .ct {
+  color: #960050;
+}
+
+/* selector property */
+code .cp {
+  color: #f8f8f2;
+}
+
+/* css property value */
+code .cv {
+  color: #ae81ff;
 }
