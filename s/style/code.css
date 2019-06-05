@@ -20,6 +20,18 @@ pre.code code {
   background-color: transparent;
 }
 
+pre[rel]::before {
+  color: #4caf50;
+  font-weight: 700;
+  content: attr(rel);
+  color: #fff;
+  position: absolute;
+  top: .33rem;
+  left: .52rem;
+  width: 100%;
+  padding: 0;
+}
+
 /* new tag */
 code .nt {
   color: #f92672;
