@@ -8,6 +8,10 @@ main, footer {
   padding: 1rem;
 }
 
+header {
+  margin-bottom: calc( var(--m-norm) * 1rem);
+}
+
 .column {
   flex-direction: column;
 }
