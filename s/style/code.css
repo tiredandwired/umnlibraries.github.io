@@ -23,12 +23,11 @@ pre.code code {
 pre[rel]::before {
   color: #4caf50;
   font-weight: 700;
+  font-size: 0.9rem;
   content: attr(rel);
-  color: #fff;
   position: absolute;
-  top: .33rem;
-  left: .52rem;
-  width: 100%;
+  top: 0.3rem;
+  left: 0.5rem;
   padding: 0;
 }
 
