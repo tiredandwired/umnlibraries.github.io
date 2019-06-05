@@ -24,7 +24,9 @@ h1 {
 blockquote {
   font-family: Georgia, Lucida Bright, serif;
   position: relative;
+  padding-left: 2rem;
   margin-bottom: calc( var(--m-norm) * 1rem);
+  border-left: 2px solid var(--col-bg-medium);
 }
 
 blockquote::before, blockquote::after {
@@ -51,7 +53,7 @@ hr {
 }
 
 .lead {
-  font-size: 150%;
+  font-size: 140%;
   background-color: var(--col-bg-light);
   padding: 0.5rem;
   margin-bottom: calc( var(--m-norm) * 1rem);
