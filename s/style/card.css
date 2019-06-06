@@ -15,6 +15,7 @@ ul.cards {
 }
 .cards > li h3 {
   margin: 0;
+  font-size: 1rem;
 }
 
 .cards > li img {
