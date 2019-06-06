@@ -112,3 +112,11 @@ nav[aria-label="Breadcrumb"] li:not(:last-child):after {
   border-bottom: 0.75ch solid transparent;
   border-left: 0.75ch solid var(--col-text);
 }
+
+nav[aria-label="Content"] li {
+  line-height: 2;
+}
+
+nav[aria-label="Content"] li > a {
+  display: block;
+}
