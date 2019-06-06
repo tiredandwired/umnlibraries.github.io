@@ -1,6 +1,8 @@
 .hero {
   margin:0 -1rem;
+  padding: calc( var(--m-max) * 1rem);
   box-shadow: none;
   text-align: center;
-  background: url(/img/mountain.svg) center center no-repeat;
+  background: url(/img/mountain.svg) top center no-repeat;
+  background-size: cover;
 }
