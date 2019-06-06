@@ -17,8 +17,16 @@ article > h2 {
   border-bottom: 1px solid;
 }
 
-h1 {
+h1, .h1 {
   font-size: calc(( var(--h1-min) * 1em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 1em)) / (var(--bp-xlarge) - var(--bp-small))));
+}
+
+h2, .h2 {
+  font-size: calc(( var(--h1-min) * 0.8em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.8em)) / (var(--bp-xlarge) - var(--bp-small))));
+}
+
+h3, .h3 {
+  font-size: calc(( var(--h1-min) * 0.7em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.7em)) / (var(--bp-xlarge) - var(--bp-small))));
 }
 
 blockquote {
