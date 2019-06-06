@@ -7,6 +7,7 @@ nav {
 
 #logo {
   width: 15rem;
+  min-width: 10rem;
 }
 
 #logo path {
