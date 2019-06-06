@@ -64,6 +64,8 @@ nav[aria-label="Main"] > a:focus::after,
   height: 0.2rem;
   background-color: var(--col-bg-medium);
   position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 nav[aria-label="Main"] > a[aria-current="page"]::after,
@@ -75,7 +77,8 @@ nav[aria-label="Main"] > a[aria-current="page"]:focus::after {
   height: 0.2rem;
   background-color: var(--col-link);
   position: absolute;
-
+  bottom: 0;
+  left: 0;
 }
 
 /*** Breadcrumb nav ***/

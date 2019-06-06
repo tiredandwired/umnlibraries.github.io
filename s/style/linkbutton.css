@@ -1,7 +1,7 @@
 /***LINKS AND BUTTONS***/
 a {
   color: var(--col-link);
-  transition: all ease 0.5s;
+  transition: all ease 0.25s;
   padding: 0 0.3rem;
 }
 
