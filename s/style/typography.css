@@ -32,6 +32,10 @@ h3, .h3 {
   font-size: 1.5rem;
 }
 
+p {
+  margin-bottom: calc(var(--m-norm) * 1rem);
+}
+
 blockquote {
   font-family: Georgia, Lucida Bright, serif;
   position: relative;

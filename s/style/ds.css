@@ -6,6 +6,7 @@
   background: url(/img/mountain.svg) top center no-repeat;
   background-size: cover;
   margin-bottom: 2rem;
+  max-width: 100%;
 }
 
 .hero blockquote {
