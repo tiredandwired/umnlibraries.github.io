@@ -58,10 +58,17 @@
 .w-50 {
   display: block;
   width: calc(50% - (var(--m-norm) * 1rem));
+  float: left;
 }
 .w-100 {
   display: block;
   width: 100%;
+}
+
+/* SIZE */
+.svg-2x {
+  height: 2rem;
+  width: 2rem;
 }
 
 /* BORDER */

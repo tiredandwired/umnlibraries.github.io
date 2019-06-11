@@ -25,6 +25,6 @@ ul.cards {
   margin-bottom: 0;
 }
 
-.cards > li footer {
+.cards > li p:last-child {
   margin-top: auto;
 }

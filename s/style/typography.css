@@ -18,15 +18,18 @@ article > h2 {
 }
 
 h1, .h1 {
-  font-size: calc(( var(--h1-min) * 0.5em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.5em)) / (var(--bp-xlarge) - var(--bp-small))));
+  /*font-size: calc(( var(--h1-min) * 0.5em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.5em)) / (var(--bp-xlarge) - var(--bp-small))));*/
+  font-size: 3rem;
 }
 
 h2, .h2 {
-  font-size: calc(( var(--h1-min) * 0.3em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.3em)) / (var(--bp-xlarge) - var(--bp-small))));
+  /*font-size: calc(( var(--h1-min) * 0.3em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.3em)) / (var(--bp-xlarge) - var(--bp-small))));*/
+  font-size: 2rem;
 }
 
 h3, .h3 {
-  font-size: calc(( var(--h1-min) * 0.1em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.1em)) / (var(--bp-xlarge) - var(--bp-small))));
+  /*font-size: calc(( var(--h1-min) * 0.1em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.1em)) / (var(--bp-xlarge) - var(--bp-small))));*/
+  font-size: 1.5rem;
 }
 
 blockquote {
