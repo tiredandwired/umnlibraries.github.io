@@ -54,6 +54,16 @@
   background-color: transparent;
 }
 
+/* WIDTH */
+.w-50 {
+  display: block;
+  width: calc(50% - (var(--m-norm) * 1rem));
+}
+.w-100 {
+  display: block;
+  width: 100%;
+}
+
 /* BORDER */
 .b {
   border: 1px solid var(--col-text-light);
