@@ -181,4 +181,5 @@
 /* For defining services or terms as cards using definition list */
 .bt-md {
   border-top: 0.25rem solid var(--col-text);
+  padding-top: 0.5rem;
 }

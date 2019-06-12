@@ -58,7 +58,6 @@ nav + main {
 
 article {
   margin-bottom: calc( var(--m-norm) * 1rem);
-  max-width: 70ch;
 }
 
 @media (max-width:50rem) {
