@@ -1,5 +1,5 @@
 /***CARD***/
-ul.cards {
+.cards {
   list-style: none;
   display: flex;
   flex-direction: row;
