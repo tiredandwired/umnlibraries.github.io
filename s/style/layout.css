@@ -4,7 +4,7 @@ body {
   background: url(/img/draft.svg);
   background-size: contain;
 }
-main, footer {
+main, body > footer {
   padding: 1rem;
 }
 
@@ -41,7 +41,7 @@ body, main {
   align-items: flex-start;
 }
 
-header, footer {
+header, body > footer {
   width: 100%;
 }
 
