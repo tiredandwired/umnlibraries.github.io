@@ -176,3 +176,9 @@
 .c-bg-medium {
   background-color: var(--col-bg-medium);
 }
+
+/* borders */
+/* For defining services or terms as cards using definition list */
+.bt-md {
+  border-top: 0.25rem solid var(--col-text);
+}
