@@ -183,3 +183,7 @@
   border-top: 0.25rem solid var(--col-text);
   padding-top: 0.5rem;
 }
+
+.b-1 {
+  border: 1px solid;
+}

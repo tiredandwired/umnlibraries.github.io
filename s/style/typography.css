@@ -41,8 +41,7 @@ h5, .h5, h6, .h6 {
 }
 
 p {
-  margin: 0 auto calc(var(--m-norm) * 1rem) auto;
-  max-width: 70ch;
+  margin-bottom: calc(var(--m-norm) * 1rem);
 }
 
 blockquote {
