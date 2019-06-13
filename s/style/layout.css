@@ -41,7 +41,7 @@ body, main {
   align-items: flex-start;
 }
 
-header, body > footer {
+header, body > footer, main > h1, main > h2 {
   width: 100%;
 }
 
