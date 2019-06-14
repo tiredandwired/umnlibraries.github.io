@@ -56,19 +56,19 @@ blockquote {
   border-left: 2px solid var(--col-bg-medium);
 }
 
-blockquote::before, blockquote::after {
+blockquote p:first-child::before, blockquote p:last-child::after {
   font-size: 3rem;
   position: absolute;
   color: var(--col-text-light);
 }
 
-blockquote::before {
+blockquote p:first-child::before {
   content: '\201C';
   margin-left: -1.5rem;
   top: -0.6rem;
 }
 
-blockquote::after {
+blockquote p:last-child::after {
   content: '\201D';
   bottom: -2.4rem;
 }
