@@ -56,7 +56,7 @@ blockquote {
   border-left: 2px solid var(--col-bg-medium);
 }
 
-blockquote p:first-child::before, blockquote p:last-child::after {
+blockquote p:first-child::before, blockquote p:last-of-type::after {
   font-size: 3rem;
   position: absolute;
   color: var(--col-text-light);
@@ -68,9 +68,9 @@ blockquote p:first-child::before {
   top: -0.6rem;
 }
 
-blockquote p:last-child::after {
+blockquote p:last-of-type::after {
   content: '\201D';
-  bottom: -2.4rem;
+  bottom: 2.4rem;
 }
 
 hr {
