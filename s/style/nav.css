@@ -54,6 +54,13 @@ nav[aria-label="Main"] > a {
   border-radius: 0;
   font-size: 1.3rem;
   text-decoration: none;
+  color: var(--col-primary);
+}
+
+nav[aria-label="Main"] > a:hover,
+nav[aria-label="Main"] > a:focus {
+  color: #fff;
+  background-color: var(--col-primary);
 }
 
 nav[aria-label="Main"] > a:hover::after,
