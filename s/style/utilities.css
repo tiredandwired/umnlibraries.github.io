@@ -7,8 +7,15 @@
 .column {
   flex-direction: column;
 }
-.oneline {
+
+.nowrap, .nowrap-md {
   flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 50rem) {
+  .nowrap-md {
+    flex-wrap: wrap;
+  }
 }
 
 .flex-square {

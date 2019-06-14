@@ -44,7 +44,7 @@ nav[aria-label="Main"], .nav-hor {
   display: flex;
 }
 
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 50em) {
   nav[aria-label="Main"] {
     flex-direction: column;
   }
@@ -52,10 +52,6 @@ nav[aria-label="Main"], .nav-hor {
     width: 100%;
     text-align: left;
     padding: 1rem;
-  }
-  main, header, footer, body > nav {
-    display: block;
-    min-width: 100%;
   }
 }
 
