@@ -29,12 +29,11 @@ main > article, section > article {
 
 article {
   position: relative;
-  width: 100%;
 }
 
 
 /*** LEFT NAV ***/
-body, main {
+body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

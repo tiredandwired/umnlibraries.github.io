@@ -17,6 +17,10 @@ article > h2, article > .h2 {
   border-bottom: 1px solid;
 }
 
+main > section > h2 {
+  margin-bottom: calc(var(--m-norm) * 1rem);
+}
+
 h1, .h1 {
   /*font-size: calc(( var(--h1-min) * 0.5em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.5em)) / (var(--bp-xlarge) - var(--bp-small))));*/
   font-size: 3rem;

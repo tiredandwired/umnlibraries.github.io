@@ -11,19 +11,22 @@ nav {
 }
 
 #logo path {
-  fill: var(--col-primary-normal);
+  fill: var(--col-primary);
 }
 
-#logo polygon.svg-m {
-  fill: var(--col-primary-normal);
+#logo .svg-m path, #logo polygon.svg-m {
+  fill: var(--col-primary);
 }
 
-#logo:hover .svg-m path, #logo:focus .svg-m path {
+#logo:hover .svg-m path,
+#logo:focus .svg-m path,
+#logo:hover polygon.svg-m,
+#logo:focus polygon.svg-m {
   fill: var(--col-secondary-light);
 }
 
 #logo:hover .svg-text path, #logo:focus .svg-text path {
-  fill: white;
+  fill: var(--col-secondary-light);
 }
 
 nav > a {
@@ -41,13 +44,11 @@ nav[aria-label="Main"], .nav-hor {
   display: flex;
 }
 
-/*nav[aria-label="Main"] > a, .nav-hor > a {
-  flex-shrink: 0;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  border: 0;
-}*/
+@media screen and (max-width: 60em) {
+  nav[aria-label="Main"] {
+    flex-direction: column;
+  }
+}
 
 nav[aria-label="Main"] > a {
   border-radius: 0;
@@ -69,9 +70,9 @@ nav[aria-label="Main"] > a:focus::after,
   left: 0;
 }
 
-nav[aria-label="Main"] > a[aria-current="page"]::after,
-nav[aria-label="Main"] > a[aria-current="page"]:hover::after,
-nav[aria-label="Main"] > a[aria-current="page"]:focus::after {
+nav[aria-label="Main"] > a[aria-current="page"]:not(#logo)::after,
+nav[aria-label="Main"] > a[aria-current="page"]:not(#logo):hover::after,
+nav[aria-label="Main"] > a[aria-current="page"]:not(#logo):focus::after {
   content: "";
   display: block;
   width: 100%;
