@@ -178,34 +178,43 @@
         <li><a href="/content/grammar.html#slashes">Letters following slashes</a></li>
         <li><a href="/content/grammar.html#writing">Simplified writing</a></li>
       </ul>
-      <li><a href="/content/alt.html" aria-current="page">Alternative text</a></li>
-      <li><a href="/content/files.html">Files</a></li>
+      <li><a href="/content/alt.html">Alternative text</a></li>
+      <li><a href="/content/files.html" aria-current="page">Files</a></li>
       <li><a href="/content/glossary.html">Glossary</a></li>
     </ul>
   </nav>
   <main id="main">
 
-    <h1>Alternative text</h1>
+    <h1>Files</h1>
+    <div class="lead">
+      <p>Published content is not presented from external formats such as Google documents (slides, spreadsheets, edt), Microsoft documents, and PDF.</p>
+      <p>Web content is never ideally saved in any other format than HTML. However, some cases exist for other file extensions. use these sparingly, and always prefer HTML over any other file type. Well formatted HTML is the absolute most accessible content delivery format.</p>
+    </div>
     <article>
-      <p>Alternative text, or alt text, is necessary for screen readers to “describe” images, so the content is accessible to people with impaired vision, or people that have disabled images for cognitive impairments or data limitations. Alt text needs to be as brief yet meaningful as possible given the surrounding text, rather than just a filename, for example.</p>
+      <h2>Portable Document File (PDF)</h2>
+      <p>This is intended to retain a printing arrangement, specifically for sharing a document in a fixed state and specifically for printing onto physical paper. The only purpose of this file existing on the website is to access it for printing. Examples might be floor plans specifically intended to be handouts, and newsletters, although newsletters and floor plans are both arguably far better served as real web documents (i.e. HTML). If a file is deemed to be PDF, it must be formatted accessibly, which requires tagging all the content.</p>
+    </article>
 
-      <p>Avoid any redundancy; those who have to listen to the web all day can hear a lot of unnecessary repetition. If the image contains something the surrounding text doesn’t convey, describe it in the alt attribute.</p>
+    <article>
+      <h2>Google Suite</h2>
+      <p>Google Suite is a set of editing tools for creating content, not for web content distribution. It’s set up for use as editing applications, and so puts a person into a different environment that is intended for content creation, not for content consumption. It affects the ability to navigate, and makes it unclear what their role is with the content. As a consumer, content is expected in a published format.</p>
 
-      <p>If the text included in the alt attribute benefits other people, use a visible text option such as a wrapping <code>&lt;figure&gt;</code> with accompanying <code>&lt;figcaption&gt;</code>.</p>
+      <h3>Google Slides</h3>
+      <p>Often used for sharing presentations. Ensure <a href="https://accessibility.umn.edu/presentations/google-slides" class="ext-site">slides are accessible</a> and consider only including them if to reference an archived event where a more accessible format isn&rsquo;t feasible.</p>
 
-      <p>In cases where the accompanying text already directly mirrors the content of the image, the alt text should be left blank, so that it isn&rsquo;t duplicated.</p>
+      <h3>Google Docs</h3>
+      <p>In no situation are Google Docs the recommended medium for content.</p>
 
-      <p>Avoid starting alt text with &ldquo;This is an image of&rdquo;, &ldquo;Photo&rdquo; or &ldquo;Photo of&rdquo;, &ldquo;A view of&rdquo;, &ldquo;You see&rdquo;, &ldquo;Screenshot of&rdquo;, or &ldquo;Thumbnail&rdquo;.</p>
+      <h3>Google Sheets</h3>
+      <p>When sharing large amounts of data, sheets may be a preferred method. In this case, enter the data into a digital repository such as the <a href="https://conservancy.umn.edu/handle/11299/166578" class="ext-site">Digital Repository of the U of M (DRUM)</a> and refer to the repository entry rather than directly to the file.</p>
 
-      <p>Use the <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" class="ext-site">alt decision tree</a> to determine how to write alt text.</p>
+      <h3>Google Forms</h3>
+      <p>Basic forms are moderately accessible but not preferred. Refer to <a href="/components/form.html">form guidelines</a> to create appropriate forms and determine what platform is best to capture data.</p>
+    </article>
 
-      <h2>Example</h2>
-      <p>&ldquo;PNRs304.jpg&rdquo; (no)<br />
-        vs.<br />
-        &ldquo;Screenshot from Parks and Rec.&rdquo; (better)<br />
-        vs.<br />
-        &ldquo;&rdquo; (empty alt attribute) with a <code>&lt;figcaption&gt; element including the text: A self-referential screencap from Parks &amp; Recreation, showing character Tom Haverford looking at an uncaptioned photo of himself. The subtitle reads, &ldquo;What is he thinking?&rdquo; (yes)
-      </p>
+    <article>
+      <h2>Microsoft Suite</h2>
+      <p>Similar to Google suite, these formats are intended for editing. They are additionally written in proprietary software that some people may not have access to, and when converted to an open format version may not retain the layouts of the original.</p>
     </article>
 
   </main>
