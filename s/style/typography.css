@@ -48,6 +48,10 @@ p {
   margin-bottom: calc(var(--m-norm) * 1rem);
 }
 
+p + ul, p + ol {
+  margin-top: -1rem;
+}
+
 blockquote {
   font-family: Georgia, Lucida Bright, serif;
   position: relative;

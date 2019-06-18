@@ -247,6 +247,84 @@
       </ul>
     </article>
 
+    <article id="label">
+      <h2>Labels</h2>
+      <p>Every input requires an attached label. Four methods are available.</p>
+
+      <h3>Preferred methods</h3>
+      <p>These two methods are preferred because they provide the most visibility and clarity for the least amount of code.</p>
+
+      <h4><code>&lt;label&gt;</code> + <code>&lgt;input&gt;</code></h4>
+      <p>The most traditional approach to pairing a <code>label</code> with an <code>input</code> is to give the <code>input</code> element a unique <code>id</code> that the <code>label</code> can refer to with the <code>for</code> attribute.</p>
+      <pre rel="HTML" class="code">
+        <code>
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"an-element"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/code&gt;</span><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"an-element"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span>"text"</span> <span class="nt"> /&gt;</span>
+        </code>
+      </pre>
+
+      <h4><code>&lgt;input&gt;</code> embedded in <code>&lt;label&gt;</code></h4>
+      <p>Embedding the <code>input</code> element within the <code>label</code> element, the <code>input</code> is implicitly connected to the <code>label</code>, eliminating the need for an <code>id</code> on the <code>input</code> as well as the <code>for</code> attribute on the <code>label</code>.</p>
+      <pre rel="HTML" class="code">
+        <code>
+<span class="nt">&lt;label&gt;</span>Search <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
+        </code>
+      </pre>
+
+      <h3>Less ideal though valid methods</h3>
+      <p>These are less than ideal because they hide the text for people with sight who would also benefit from the clarification, or they rely on assistive technology to properly announce the text in a meaningful order while adding code complexity.</p>
+
+      <h4>Screen reader only hidden label</h4>
+      <p>Using <code>aria-label</code> is specifically for assistive technology to detect. Using this method is only suggested if the <code>input</code> has clear intent by its context, and even then one assumes people without visual impairment are able to interpret intent correctly.</p>
+
+      <pre rel="HTML" class="code">
+        <code>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span> <span class="nt">/&gt;</span>
+        </code>
+      </pre>
+
+      <h4><acronym>ARIA</acronym> to tie two elements together</h4>
+      <p>This method allows for the label to be something other than a <code>label</code> element.</p>
+      <pre rel="HTML" class="code">
+        <code>
+<span class="nt">&lt;input</span> <span class="na">aria-labelledby=</span><span class="s">"search-button"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span>"text"</span> <span class="nt"> /&gt;</span><span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"search-button"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/code&gt;</span>
+        </code>
+      </pre>
+
+    </article>
+
+    <article id="placeholder">
+      <h2>Placeholder hints</h2>
+      <p>Never use the placeholder attribute. Placeholder contrast is inefficient, its placement may confuse users, and it disappears, forcing a person to recall.</p>
+
+      <p>If additional instruction is needed for an input field, use the following methods.</p>
+
+      <h3>Input group instructions</h3>
+      <p>Use a <code>fieldset</code> to group related <code>input</code> elements together, and use the <code>aria-describedby</code> attribute to indicate the element with instructions.</p>
+      <pre rel="HTML" class="code">
+        <code>
+&lt;fieldset aria-describedby="date-hint" role="group"&gt;
+  &lt;legend&gt;
+    &lt;h3&gt;When was your id issued?&lt;/h3&gt;
+  &lt;/legend&gt;
+  &lt;p id="date-hint"&gt;Example, 01 08 2007&lt;/p&gt;
+  &lt;div class="row"&gt;
+    &lt;label&gt;
+       Day &lt;input id="date-day" name="day" type="number" pattern="[0-9]*"&gt;
+    &lt;/label&gt;
+    &lt;label&gt;
+      Month  &lt;input id="date-month" name="month" type="number" pattern="[0-9]*"&gt;
+    &lt;/label&gt;
+    &lt;label&gt;
+      Year  &lt;input id="date-year" name="year" type="number" pattern="[0-9]*"&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;
+        </code>
+      </pre>
+
+    </article>
+
+
 
   </main>
 
