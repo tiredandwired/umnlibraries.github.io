@@ -191,21 +191,30 @@
     <h1>Responsible design</h1>
     <div class="lead">
       <p>Optimize design and be lightweight. Do not assume people have unlimited data. Optimized code reduces our carbon footprint and increases efficiency.</p>
+
+      <p>Sustainable design is design that is efficient and accessible. Creating good experiences for both mobile and desktop improves accessibility because it makes it easy for people to access a site no matter what hardware they have. Mobile-first web design also helps avoid loading large assets designed for desktop machines, which improves site speed and energy efficiency.</p>
     </div>
 
-    <p>Adapted from <a href="https://sustainablewebdesign.org/" class="ext-site">sustainable web design</a>.</p>
+    <p>Adapted from <a href="https://sustainablewebdesign.org/" class="ext-site">sustainable web design</a> and <cite rel="author">Lara Callender Hogan</cite>&rsquo;s book <cite>Designing for performance: weighing auesthetics and speed</cite>.</p>
 
     <article id="optimization">
       <h2>Optimization</h2>
       <dl>
+        <dt>Optimize images</dt>
+        <dd>Images make up the majority of total page weight. The number of image bytes has grown by more than 30% on the average web page in 2014, with little growth in image requests to match the increase. Optimizing images is the easiest big win.</dd>
+        <dd>Find the right balance of file size and quality for each image, look for ways to reduce the title number of image requests, and optimize image creation workflows. Refer to <a href="/design/imagery.html">image guidelines</a> for how to optimize well.</dd>
+
+        <dt>Optimize markup</dt>
+        <dd>Avoid &ldquo;divitis&rdquo;, the excessive use of <code>&lt;div&gt;</code> elements, use semantic HTML (for example, use the appropriate heading element rather than a <code>&lt;p&gt;</code> or <code>&lt;div&gt;</code>). Using correct elements reduces re-engineering to style default containers and also greatly improves accessibility as well as search engine optimization (a search engine may better determine what content is if it is &lt;tagged&gt; well) and browsers, which may then apply feature enhancements such as auto-filling standard form fields.</dd>
+
+        <dt>Optimize styles</dt>
+        <dd>Remove unused styles and condense and combine styles. Reduce specificity in stylesheets to improve overriding issues as well as write more performant code.</dd>
+
+        <dt>Optimize fonts</dt>
+        <dd>Use system or web native fonts when possible to reduce requests and &ldquo;flash of unstyled content&rdquo; concerns. Where non-native fonts are selected, remove sets in the font set that will not be used (e.g. will a semi-bold italic set be used?).</dd>
+
         <dt>Findability</dt>
         <dd>The easier content is to find, the fewer pages a user has to load to locate information. This means fewer server requests are made and that unnecessary page elements &mdash; like photos and videos, which take up a lot of bandwidth &mdash; don&rsquo;t load, either. These small energy savings accumulate over time.</dd>
-
-        <dt>Performance optimization</dt>
-        <dd>Sustainability and page speed go hand-in-hand. When your website runs more efficiently, you use less processing power, which means that your site uses less energy and will have a lower carbon footprint. Your customers expect to get the content they want instantaneously, and efficient pages load more quickly, reducing your site&rsquo;s bounce rate and keeping customers engaged and satisfied.</dd>
-
-        <dt>Design &amp; user experience</dt>
-        <dd>Sustainable design is design that is efficient and accessible. Creating good experiences for both mobile and desktop users improves accessibility because it makes it easy for people to access your site no matter what hardware they have. Mobile-first web design also helps you avoid loading large assets designed for desktop machines, which improves your site's speed and energy efficiency.</dd>
 
       </dl>
     </article>
@@ -213,6 +222,9 @@
     <article id="performance">
       <h2>Web performance</h2>
       <dl>
+        <dt>Performance optimization</dt>
+        <dd>Sustainability and page speed go hand-in-hand. When your website runs more efficiently, you use less processing power, which means that your site uses less energy and will have a lower carbon footprint. People expect to get the content they want instantaneously, and efficient pages load more quickly, reducing your site&rsquo;s bounce rate and keeping people engaged and satisfied.</dd>
+
         <dt>Utilize HTTP/2</dt>
         <dd>HTTP/2 allows multiple requests to run over a single thread to run in parallel.</dd>
 
