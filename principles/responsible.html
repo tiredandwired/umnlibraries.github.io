@@ -199,21 +199,21 @@
     <article id="optimization">
       <h2>Optimization</h2>
       <dl>
+        <dt>Findability</dt>
+        <dd>The easier content is to find, the fewer pages a user has to load to locate information. This means fewer server requests are made and that unnecessary page elements &mdash; like photos and videos, which take up a lot of bandwidth &mdash; don&rsquo;t load, either. These small energy savings accumulate over time.</dd>
+        
         <dt>Optimize images</dt>
         <dd>Images make up the majority of total page weight. The number of image bytes has grown by more than 30% on the average web page in 2014, with little growth in image requests to match the increase. Optimizing images is the easiest big win.</dd>
         <dd>Find the right balance of file size and quality for each image, look for ways to reduce the title number of image requests, and optimize image creation workflows. Refer to <a href="/design/imagery.html">image guidelines</a> for how to optimize well.</dd>
 
         <dt>Optimize markup</dt>
-        <dd>Avoid &ldquo;divitis&rdquo;, the excessive use of <code>&lt;div&gt;</code> elements, use semantic HTML (for example, use the appropriate heading element rather than a <code>&lt;p&gt;</code> or <code>&lt;div&gt;</code>). Using correct elements reduces re-engineering to style default containers and also greatly improves accessibility as well as search engine optimization (a search engine may better determine what content is if it is &ldquo;tagged&rdquo; well) and browsers, which may then apply feature enhancements such as auto-filling standard form fields.</dd>
+        <dd>Avoid excessive use of <code>&lt;div&gt;</code> elements. Use semantic HTML (for example, use the appropriate heading element rather than a <code>&lt;p&gt;</code> or <code>&lt;div&gt;</code>). Using correct elements to improve  accessibility as well as search engine optimization (a search engine may better determine what content is if it is &ldquo;tagged&rdquo; correctly). It also allows browsers to apply enhancements such as auto-filling standard form fields.</dd>
 
         <dt>Optimize styles</dt>
         <dd>Remove unused styles and condense and combine styles. Reduce specificity in stylesheets to improve overriding issues as well as write more performant code.</dd>
 
         <dt>Optimize fonts</dt>
-        <dd>Use system or web native fonts when possible to reduce requests and &ldquo;flash of unstyled content&rdquo; concerns. Where non-native fonts are selected, remove sets in the font set that will not be used (e.g. will a semi-bold italic set be used?).</dd>
-
-        <dt>Findability</dt>
-        <dd>The easier content is to find, the fewer pages a user has to load to locate information. This means fewer server requests are made and that unnecessary page elements &mdash; like photos and videos, which take up a lot of bandwidth &mdash; don&rsquo;t load, either. These small energy savings accumulate over time.</dd>
+        <dd>Use system or web native fonts to reduce requests and &ldquo;flash of unstyled content&rdquo; concerns. Where non-native fonts are selected, remove sets in the font set that will not be used (e.g. will a semi-bold italic set be used?).</dd>        
 
       </dl>
     </article>
@@ -222,15 +222,16 @@
       <h2>Web performance</h2>
       <dl>
         <dt>Performance optimization</dt>
-        <dd>Sustainability and page speed go hand-in-hand. When your website runs more efficiently, you use less processing power, which means that your site uses less energy and will have a lower carbon footprint. People expect to get the content they want instantaneously, and efficient pages load more quickly, reducing your site&rsquo;s bounce rate and keeping people engaged and satisfied.</dd>
-
-        <dt>Implement HTTP/2</dt>
-        <dd>HTTP/2 allows multiple requests to run over a single connection as well as simultaneous downloads. This replaces HTTP/1&rsquo;s rule of only one outstanding request per TCP connection. Servers can push content to the browser instead of waiting for the browser to request individual page assets.</dd>
-        <dd>For more practical information about HTTP/2, review Tim Frick's Designing for sustainability, pp. 218-220.</dd>
+        <dd>Sustainability and page speed go hand-in-hand. An efficient website uses less processing power, which means that your site uses less energy and has a lower carbon footprint.</dd>
+        <dd>People expect to get the content they want instantaneously, and efficient pages load more quickly. This reduces your site&rsquo;s bounce rate and keeps people engaged and satisfied.</dd>
 
         <dt>Reduce resource requests</dt>
         <dd>Optimize the size and number of requests that a web page takes to render. Request reduction is desirable despite threading capabilities in HTTP/2, to support HTTP/1 browsers and clients as well as intentionality of energy consumption for transmitting data. Be mindful of any increase in requests to the server.</dd>
 
+        <dt>Implement HTTP/2</dt>
+        <dd>HTTP/2 allows multiple requests to run over a single connection as well as simultaneous downloads. This replaces HTTP/1&rsquo;s rule of only one outstanding request per TCP connection. Servers can push content to the browser instead of waiting for the browser to request individual page assets.</dd>
+        <dd>For more practical information about HTTP/2, review Tim Frick's Designing for sustainability, pp. 218-220.</dd>
+        
         <dt>Utilize caching</dt>
         <dd>Cache assets aggressively where possible.</dd>
         <dd>Caching is critical for site performance; assets that are cached do not need to be requested again from the server, saving a request. All static assets such as CSS files, Javascript files, images, PDFs, and fonts should be cached.</dd>
@@ -238,7 +239,7 @@
 
     <article id="sustainable">
       <h2>Sustainable practices</h2>
-      <p>Just as people do not deserve a reduced experience, nor does our planet deserve to suffer the consequences of bad design and web delivery.</p>
+      <p>Just as people do not deserve a reduced experience, our planet does not deserve to suffer the consequences of bad design and web delivery.</p>
       <dl>
         <dt>Delete outdated and unused web assets</dt>
         <dd>Nothing should live forever, including digital files. Retention plans need to exist with frequent auditing of all assets. That which continues to &ldquo;live&rdquo; requires energy and storage.</dd>
