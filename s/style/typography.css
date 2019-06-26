@@ -162,7 +162,6 @@ article {
 [aria-describedby="f-label"]:hover::after {
   outline: thin dotted;
   outline-offset: 2px;
-  background: var(--col-secondary-light);
 }
 
 [aria-label="Back to content"] {
@@ -173,5 +172,5 @@ article {
  * Highlight target note
  */
 .footnote :target {
-  background: var(-col-secondary-light);
+  background: var(--col-secondary-light);
 }
