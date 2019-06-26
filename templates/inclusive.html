@@ -125,7 +125,7 @@
         	</g>
         </svg>
         Code</a>
-      <a href="/patterns/">
+      <a href="/templates/">
         <svg aria-hidden="true" class="glyph" focusable="false" viewBox="0 0 92 85">
           <g>
             <path d="M40.31,33.5c-0.57,1.09-1,2.26-1.29,3.49l-21.83-8.07c0.57-0.8,0.97-1.75,1.17-2.78 c0.03-0.23,0.09-0.46,0.11-0.72L40.31,33.5z"></path>
@@ -139,14 +139,14 @@
             <path d="M79.55,14.18c-1.43,1.43-3.29,2.15-5.18,2.15c-0.83,0-1.66-0.14-2.46-0.43c-1-0.34-1.92-0.92-2.72-1.72 c-0.11-0.11-0.23-0.26-0.34-0.37c-2.52-2.86-2.38-7.24,0.34-9.99c2.86-2.86,7.53-2.83,10.36,0C82.41,6.68,82.41,11.35,79.55,14.18z"></path>
           </g>
         </svg>
-        Patterns</a>
+        Templates</a>
     </nav>
 
     <nav role="navigation" aria-label="Breadcrumb">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/principles/">Principles</a></li>
-        <li><a href="/principles/responsible.html" aria-current="page">Responsible</a></li>
+        <li><a href="/principles/inclusive.html" aria-current="page">Inclusive</a></li>
       </ol>
     </nav>
 
@@ -170,13 +170,13 @@
         <li><a href="/principles/ethical.html#privacy">Personal privacy</a></li>
         <li><a href="/principles/ethical.html#security">Data security</a></li>
       </ul>
-      <li><a href="/principles/inclusive.html">Inclusive</a></li>
+      <li><a href="/principles/inclusive.html" aria-current="page">Inclusive</a></li>
       <li><a href="/principles/mindful.html">Mindful</a></li>
       <ul>
         <li><a href="/principles/mindful.html#intentional">Intentional design</a></li>
         <li><a href="/principles/mindful.html#person-first">Person-first design</a></li>
       </ul>
-      <li><a href="/principles/responsible.html" aria-current="page">Responsible</a></li>
+      <li><a href="/principles/responsible.html">Responsible</a></li>
       <ul>
         <li><a href="/principles/responsible.html#optimization">Optimization</a></li>
         <li><a href="/principles/responsible.html#performance">Web performance</a></li>
@@ -185,70 +185,58 @@
     </ul>
   </nav>
 
+
   <main id="main">
 
-    <h1>Responsible design</h1>
+    <h1>Inclusive design</h1>
     <div class="lead">
-      <p>Optimize design and be lightweight. Do not assume people have unlimited data. Optimized code reduces our carbon footprint and increases efficiency.</p>
+      <p>Write content designed for everyone regardless of gender, sexual orientation, and emotional state.</p>
 
-      <p>Sustainable design is design that is efficient and accessible. Creating good experiences for both mobile and desktop improves accessibility because it makes it easy for people to access a site no matter what hardware they have. Mobile-first web design also helps avoid loading large assets designed for desktop machines, which improves site speed and energy efficiency.</p>
+      <blockquote>
+        <p>The user interface should be so simple that a beginner in an emergency can understand it within ten seconds.</p>
+        <footer>&ndash;<cite>Ted Nelson</cite>, computer scientist</footer>
+      </blockquote>
+
+      <blockquote>
+        <p>We&rsquo;re all imperfectly human, and our readers are no exception. They have touchy subjects and insecurities and things they&rsquo;d rather not talk about &mdash; and they bring them all to the table when they interact with our content.</p>
+        <footer>&ndash;<cite>Kate Kiefer Lee</cite>, Don&rsquo;t poke the bear</footer>
+      </blockquote>
     </div>
 
-    <p>Adapted from <a href="https://sustainablewebdesign.org/" class="ext-site">sustainable web design</a> and <cite rel="author">Lara Callender Hogan</cite>&rsquo;s book <cite>Designing for performance: weighing auesthetics and speed</cite>.</p>
+    <p>Adapted from <a href="https://inclusivedesignprinciples.org/" class="ext-site">inclusive design principles</a>. Also consider <a href="https://principles.design/examples/the-ten-principles-of-inclusive-design" class="ext-site">the ten principles of inclusive web design</a>.</p>
 
-    <article id="optimization">
-      <h2>Optimization</h2>
+    <article>
+      <p>Inclusive design principles are about putting people first. It&rsquo;s about designing for the needs of people with permanent, temporary, situational, or changing disabilities &mdash; all of us, really.</p>
+
       <dl>
-        <dt>Findability</dt>
-        <dd>The easier content is to find, the fewer pages a user has to load to locate information. This means fewer server requests are made and that unnecessary page elements &mdash; like photos and videos, which take up a lot of bandwidth &mdash; don&rsquo;t load, either. These small energy savings accumulate over time.</dd>
-        
-        <dt>Optimize images</dt>
-        <dd>Images make up the majority of total page weight. The number of image bytes has grown by more than 30% on the average web page in 2014, with little growth in image requests to match the increase. Optimizing images is the easiest big win.</dd>
-        <dd>Find the right balance of file size and quality for each image, look for ways to reduce the title number of image requests, and optimize image creation workflows. Refer to <a href="/design/imagery.html">image guidelines</a> for how to optimize well.</dd>
+        <dt>Provide comparable experience</dt>
+        <dd>Ensure the interface provides a comparable experience for all so people can accomplish tasks in a way that suits their needs without undermining the quality of the content.</dd>
+        <dd>Whether out of circumstance, choice, or context, people are diverse. People use different approaches and tools to read and operate interfaces. Make the interface comparable in value, quality, and efficiency, regardless of how people reach it.</dd>
 
-        <dt>Optimize markup</dt>
-        <dd>Avoid excessive use of <code>&lt;div&gt;</code> elements. Use semantic HTML (for example, use the appropriate heading element rather than a <code>&lt;p&gt;</code> or <code>&lt;div&gt;</code>). Using correct elements to improve  accessibility as well as search engine optimization (a search engine may better determine what content is if it is &ldquo;tagged&rdquo; correctly). It also allows browsers to apply enhancements such as auto-filling standard form fields.</dd>
+        <dt>Consider situation</dt>
+        <dd>People use interfaces in different situations. Make sure your interface delivers a valuable experience to people regardless of their circumstances.</dd>
+        <dd>People are first time visitors, established visitors, at work, at home, on the move, and under pressure. All of these situations have an impact. For those who already find interaction challenging, such as those with disabilities, this impact may make usage particularly difficult.</dd>
 
-        <dt>Optimize styles</dt>
-        <dd>Remove unused styles and condense and combine styles. Reduce specificity in stylesheets to improve overriding issues as well as write more performant code.</dd>
+        <dt>Be consistent</dt>
+        <dd>Use familiar conventions and apply them consistently.</dd>
+        <dd>Familiar interfaces borrow from well-established patterns. Use patterns consistently within the interface to reinforce their meaning and purpose. Apply this to functionality, behavior, editorial, and presentation. Say the same things in the same way so that peolpe can do the same things in the same way.</dd>
 
-        <dt>Optimize fonts</dt>
-        <dd>Use system or web native fonts to reduce requests and &ldquo;flash of unstyled content&rdquo; concerns. Where non-native fonts are selected, remove sets in the font set that will not be used (e.g. will a semi-bold italic set be used?).</dd>        
+        <dt>Give control</dt>
+        <dd>Make sure people are in control. Let people access and interact with content in their preferred way.</dd>
+        <dd>Do not suppress or disable the ability to change standard browser and platform settings such as orientation, font size, zoom, and contrast. Avoid content changes that are not initiated by the person unless there is a way to control it.</dd>
 
+        <dt>Offer choice</dt>
+        <dd>Consider providing different ways for people to complete tasks, especially those that are complex or non standard.</dd>
+        <dd>Often more than one way is possible to complete a task. Don't assume someone's preferred way. Offer people choices that suit them and their circumstances by giving alternatives for layout and task completion.</dd>
+
+        <dt>Prioritize content</dt>
+        <dd>Help people focus on core tasks, features, and information by prioritizing them within the content and layout.</dd>
+        <dd>Interfaces can be difficult to understand when core features are not exposed and prioritized. A site or application may provide lots of information and functionality, but people should be able to focus on one thing at a time. Identify the core purpose of the interface, and then the content and features needed to fulfill that purpose.</dd>
+
+        <dt>Add value</dt>
+        <dd>Consider the value of features and how they improve the experience for different people.</dd>
+        <dd>Features should add value to the experience by providing efficient and diverse ways to find and interact with content. Consider device features such as voice, geolocation, camera and vibration API's, and how integration with connected devices or a second screen could provide choice.</dd>
       </dl>
-    </article>
-
-    <article id="performance">
-      <h2>Web performance</h2>
-      <dl>
-        <dt>Performance optimization</dt>
-        <dd>Sustainability and page speed go hand-in-hand. An efficient website uses less processing power, which means that your site uses less energy and has a lower carbon footprint.</dd>
-        <dd>People expect to get the content they want instantaneously, and efficient pages load more quickly. This reduces your site&rsquo;s bounce rate and keeps people engaged and satisfied.</dd>
-
-        <dt>Reduce resource requests</dt>
-        <dd>Optimize the size and number of requests that a web page takes to render. Request reduction is desirable despite threading capabilities in HTTP/2, to support HTTP/1 browsers and clients as well as intentionality of energy consumption for transmitting data. Be mindful of any increase in requests to the server.</dd>
-
-        <dt>Implement HTTP/2</dt>
-        <dd>HTTP/2 allows multiple requests to run over a single connection as well as simultaneous downloads. This replaces HTTP/1&rsquo;s rule of only one outstanding request per TCP connection. Servers can push content to the browser instead of waiting for the browser to request individual page assets.</dd>
-        <dd>For more practical information about HTTP/2, review Tim Frick's Designing for sustainability, pp. 218-220.</dd>
-        
-        <dt>Utilize caching</dt>
-        <dd>Cache assets aggressively where possible.</dd>
-        <dd>Caching is critical for site performance; assets that are cached do not need to be requested again from the server, saving a request. All static assets such as CSS files, Javascript files, images, PDFs, and fonts should be cached.</dd>
-    </article>
-
-    <article id="sustainable">
-      <h2>Sustainable practices</h2>
-      <p>Just as people do not deserve a reduced experience, our planet does not deserve to suffer the consequences of bad design and web delivery.</p>
-      <dl>
-        <dt>Delete outdated and unused web assets</dt>
-        <dd>Nothing should live forever, including digital files. Retention plans need to exist with frequent auditing of all assets. That which continues to &ldquo;live&rdquo; requires energy and storage.</dd>
-
-        <dt>Green hosting</dt>
-        <dd>The servers that store the files that make up web pages require power 24 hours a day, so the single most impactful thing you can do to move toward a more sustainable website is use a hosting provider that runs on 100% renewable energy.</dd>
-      </dl>
-
-      <p>Consider committing to the <a href="https://www.sustainablewebmanifesto.com/" class="ext-site">sustainable web manifesto</a>.</p>
     </article>
 
   </main>
