@@ -90,6 +90,8 @@ hr {
   margin-bottom: calc( var(--m-norm) * 1rem);
 }
 
+
+/* DEFINITION LISTS */
 dt {
   font-weight: bold;
 }
@@ -100,4 +102,70 @@ dd {
 
 dt:not(:first-child) {
   margin-top: 1rem;
+}
+
+/* FOOTNOTES */
+footer.footnote {
+  margin-top: 5rem;
+  border-top: 1px solid silver;
+  font-size: 0.9rem;
+}
+
+.footnote ol {
+  padding-left: 1rem;
+}
+
+article {
+  counter-reset: f-1;
+}
+
+/**
+ * Inline footnotes references
+ * 1. Increment the counter at each new reference
+ * 2. Reset link styles to make it appear like regular text
+ */
+[aria-describedby="f-label"] {
+  counter-increment: f-1; /* 1 */
+  text-decoration: none; /* 2 */
+  color: inherit; /* 2 */
+  cursor: default; /* 2 */
+  outline: none; /* 2 */
+}
+
+/**
+ * Actual numbered references
+ * 1. Display the current state of the counter (e.g. `[1]`)
+ * 2. Align text as superscript
+ * 3. Make the number smaller (since it's superscript)
+ * 4. Slightly offset the number from the text
+ * 5. Reset link styles on the number to show it's usable
+ */
+[aria-describedby="f-label"]::after {
+  content: '[' counter(f-1) ']'; /* 1 */
+  vertical-align: super; /* 2 */
+  font-size: 0.5rem; /* 3 */
+  margin-left: 2px; /* 4 */
+  color: var(--col-link); /* 5 */
+  text-decoration: underline; /* 5 */
+  cursor: pointer; /* 5 */
+}
+
+/**
+ * Resetting the default focused styles on the number
+ */
+[aria-describedby="f-label"]:focus::after {
+  outline: thin dotted;
+  outline-offset: 2px;
+  background: var(--col-secondary-light);
+}
+
+[aria-label="Back to content"] {
+  font-size: 0.8em;
+}
+
+/**
+ * Highlight target note
+ */
+.footnote :target {
+  background: var(-col-secondary-light);
 }
