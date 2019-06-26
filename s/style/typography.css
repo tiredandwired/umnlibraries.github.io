@@ -150,10 +150,16 @@ article {
   cursor: pointer; /* 5 */
 }
 
+[aria-describedby="f-label"]:focus::after,
+[aria-describedby="f-label"]:hover::after {
+  color: white;
+}
+
 /**
  * Resetting the default focused styles on the number
  */
-[aria-describedby="f-label"]:focus::after {
+[aria-describedby="f-label"]:focus::after,
+[aria-describedby="f-label"]:hover::after {
   outline: thin dotted;
   outline-offset: 2px;
   background: var(--col-secondary-light);
