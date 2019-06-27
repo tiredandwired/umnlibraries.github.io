@@ -255,19 +255,19 @@
 
       <h4><code>&lt;label&gt;</code> + <code>&lt;input&gt;</code></h4>
       <p>The most traditional approach to pairing a <code>label</code> with an <code>input</code> is to give the <code>input</code> element a unique <code>id</code> that the <code>label</code> can refer to with the <code>for</code> attribute.</p>
-      <pre rel="HTML" class="code">
-        <code>
+<pre rel="HTML" class="code">
+<code>
 <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"an-element"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/code&gt;</span><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"an-element"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span>"text"</span> <span class="nt"> /&gt;</span>
-        </code>
-      </pre>
+</code>
+</pre>
 
       <h4><code>&lt;input&gt;</code> embedded in <code>&lt;label&gt;</code></h4>
       <p>Embedding the <code>input</code> element within the <code>label</code> element, the <code>input</code> is implicitly connected to the <code>label</code>, eliminating the need for an <code>id</code> on the <code>input</code> as well as the <code>for</code> attribute on the <code>label</code>.</p>
-      <pre rel="HTML" class="code">
-        <code>
+<pre rel="HTML" class="code">
+<code>
 <span class="nt">&lt;label&gt;</span>Search <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
-        </code>
-      </pre>
+</code>
+</pre>
 
       <h3>Less ideal though valid methods</h3>
       <p>These are less than ideal because they hide the text for people with sight who would also benefit from the clarification, or they rely on assistive technology to properly announce the text in a meaningful order while adding code complexity.</p>
@@ -275,20 +275,19 @@
       <h4>Screen reader only hidden label</h4>
       <p>Using <code>aria-label</code> is specifically for assistive technology to detect. Using this method is only suggested if the <code>input</code> has clear intent by its context, and even then one assumes people without visual impairment are able to interpret intent correctly.</p>
 
-      <pre rel="HTML" class="code">
-        <code>
+<pre rel="HTML" class="code">
+<code>
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span> <span class="nt">/&gt;</span>
-        </code>
-      </pre>
+</code>
+</pre>
 
       <h4><acronym>ARIA</acronym> to tie two elements together</h4>
       <p>This method allows for the label to be something other than a <code>label</code> element.</p>
-      <pre rel="HTML" class="code">
-        <code>
+<pre rel="HTML" class="code">
+<code>
 <span class="nt">&lt;input</span> <span class="na">aria-labelledby=</span><span class="s">"search-button"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span>"text"</span> <span class="nt"> /&gt;</span><span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"search-button"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/code&gt;</span>
-        </code>
-      </pre>
-
+</code>
+</pre>
     </article>
 
     <article id="placeholder">
@@ -299,30 +298,183 @@
 
       <h3>Input group instructions</h3>
       <p>Use a <code>fieldset</code> to group related <code>input</code> elements together, and use the <code>aria-describedby</code> attribute to indicate the element with instructions.</p>
-      <pre rel="HTML" class="code">
-        <code>
-&lt;fieldset aria-describedby="date-hint" role="group"&gt;
-  &lt;legend&gt;
-    &lt;h3&gt;When was your id issued?&lt;/h3&gt;
-  &lt;/legend&gt;
-  &lt;p id="date-hint"&gt;Example, 01 08 2007&lt;/p&gt;
-  &lt;div class="row"&gt;
-    &lt;label&gt;
-       Day &lt;input id="date-day" name="day" type="number" pattern="[0-9]*"&gt;
-    &lt;/label&gt;
-    &lt;label&gt;
-      Month  &lt;input id="date-month" name="month" type="number" pattern="[0-9]*"&gt;
-    &lt;/label&gt;
-    &lt;label&gt;
-      Year  &lt;input id="date-year" name="year" type="number" pattern="[0-9]*"&gt;
-    &lt;/label&gt;
-  &lt;/div&gt;
-&lt;/fieldset&gt;
-        </code>
-      </pre>
+<pre rel="HTML" class="code">
+<code>
+<span class="nt">&lt;fieldset</span> <span class="na">aria-describedby=</span><span class="s">"date-hint"</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;</span>legend<span class="nt">&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>When was your id issued?<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;/legend&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"date-hint"</span><span class="nt">&gt;</span>Example, 01 08 2007<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label&gt;</span>
+       Day <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"date-day"</span> <span class="na">name=</span><span class="s">"day"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">pattern=</span><span class="s">"[0-9]*"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label&gt;</span>
+      Month  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"date-month"</span> <span class="na">name=</span><span class="s">"month"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">pattern=</span><span class="s">"[0-9]*"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label&gt;</span>
+      Year  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"date-year"</span> <span class="na">name=</span><span class="s">"year"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">pattern=</span><span class="s">"[0-9]*"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/fieldset&gt;</span>
+</code>
+</pre>
+
+      <h3>Instructions for single field</h3>
+<pre rel="HTML" class="code">
+<code>
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email address<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"email-hint"</span><span class="nt">&gt;</span>Use official umn.edu address</span><span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">pattern=</span><span class="s">".+\@umn.edu$"</span> <span class="na">aria-describedby=</span><span class="s">"email-hint"</span><span class="nt">&gt;</span>
+</code>
+</pre>
+    </article>
+
+    <article id="related">
+      <h2>Related inputs</h2>
+      <p>Group similar questions together with a useful heading using <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code>.</p>
+<pre rel="HTML" class="code">
+<code>
+<span class="nt">&lt;fieldset&gt;</span>
+  <span class="nt">&lt;legend&gt;</span>Section 1<span class="nt">&lt;/legend&gt;</span>
+  <span class="nt">&lt;label&gt;</span><span class="nt">&lt;input <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"option1"</span><span class="nt">&gt;</span>Option 1 <span class="nt">/&gt;</span><span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label&gt;</span>Enter your text <span class="nt">&lt;input <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"entry1"</span><span class="nt">&gt;</span>O<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/fieldset&gt;</span>
+</code>
+</pre>
+    </article>
+
+    <article>
+      <h2>Required vs. optional</h2>
+      <p>Clearly mark mandatory fields.</p>
+      <p>If all fields are required, state &ldquo;All fields are required&rdquo; at the beginning of the form.</p>
+      <p>If logical, place all optional fields at the end of the form and label them &ldquo;(optional)&rdquo;. More importantly, if the field is optional, consider whether it is necessary to have on the form.</p>
+      <p>To identify required fields, use the following code:</p>
+<pre rel="HTML" class="code">
+<code>
+<span class="nt">&lt;p&gt;</span>* All fields marked with an asterisk are <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"req-hint"</span><span class="nt">&gt;</span>required<span class="nt">&lt;/span&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">aria-describedby=</span><span class="s">"req-hint"</span><span class="nt">&gt;</span>Name <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;&lt;/label&gt;</span>
+</code>
+</pre>
+    </article>
+
+    <article>
+      <h2>Input types</h2>
+      <p>Choose the best input type, avoid using &ldquo;text&rdquo; as a default if better options exist. Available input types in HTML5:</p>
+      <ul>
+        <li><code>button</code></li>
+        <li><code>checkbox</code></li>
+        <li><code>color</code></li>
+        <li><code>date</code></li>
+        <li><code>datetime-local</code></li>
+        <li><code>email</code></li>
+        <li><code>file</code></li>
+        <li><code>hidden</code></li>
+        <li><code>image</code></li>
+        <li><code>month</code></li>
+        <li><code>number</code></li>
+        <li><code>password</code></li>
+        <li><code>radio</code></li>
+        <li><code>range</code></li>
+        <li><code>reset</code></li>
+        <li><code>search</code></li>
+        <li><code>submit</code></li>
+        <li><code>tel</code></li>
+        <li><code>text</code></li>
+        <li><code>time</code></li>
+        <li><code>url</code></li>
+        <li><code>week</code></li>
+      </ul>
+
+      <p>Be mindful of what types are supported. Also be mindful of what data SHOULD be accepted in fields. For instance, make no assumptions about a person&rsquo;s name &mdash; whether they have a first, last, middle, non-hyphenated, ASCII-only name. Read <a href="https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/" class="ext-site">Kalzumeus&rsquo; article</a> about some assumptions we make about names.</p>
+    </article>
+
+    <article>
+      <h2>Checkboxes and radio buttons</h2>
+      <p>The <code>&lt;fieldset&gt;</code> surrounds the entire grouping of checkboxes or radio buttons. The <code>&lt;legend&gt;</code> provides a description for the grouping.</p>
+
+      <p>Some assistive technology reads the legend text for reach fieldset, so it should be brief and descriptive. This helps someone using assistive technology to understand the question they are answering with the group of checkboxes.</p>
+
+      <p>Adapted from <a href="https://a11y-style-guide.com/style-guide/section-forms.html" class="ext-site">A11y Style Guide</a>.</p>
 
     </article>
 
+    <article>
+      <h2>Auto-complete and auto-suggest HTML features</h2>
+      <p>Use autocomplete smartly. Include on every input, even with a basic <code>"on"</code> or <code>"off"</code> value.</p>
+
+      <p>Autocomplete is helpful if someone has saved their data to their browser for future use, which may quickly speed up the form process by pre populating the fields with the browser-saved content. This helps most people but especially those using assistive technology, with motor limitations, with attention concerns, and with cognitive limitations.</p>
+
+      <p>To enable this feature more consistently across browsers, identify the input content type with semantic markup, <code>autocomplete</code>.</p>
+
+      <p>Autocomplete may have multiple values, similar to the class attribute. List of available autocomplete values:</p>
+      <ul>
+        <li><code>name</code></li>
+        <li><code>honorific-prefix</code></li>
+        <li><code>given-name</code></li>
+        <li><code>additional-name</code></li>
+        <li><code>family-name</code></li>
+        <li><code>honorific-suffix</code></li>
+        <li><code>nickname</code></li>
+        <li><code>username</code></li>
+        <li><code>new-password</code></li>
+        <li><code>current-password</code></li>
+        <li><code>organization-title</code></li>
+        <li><code>organization</code></li>
+        <li><code>street-address</code></li>
+        <li><code>address-line1</code></li>
+        <li><code>address-line2</code></li>
+        <li><code>address-line3</code></li>
+        <li><code>address-level4</code></li>
+        <li><code>address-level3</code></li>
+        <li><code>address-level2</code></li>
+        <li><code>address-level1</code></li>
+        <li><code>country</code></li>
+        <li><code>country-name</code></li>
+        <li><code>postal-code</code></li>
+        <li><code>cc-name</code></li>
+        <li><code>cc-given-name</code></li>
+        <li><code>cc-additional-name</code></li>
+        <li><code>cc-family-name</code></li>
+        <li><code>cc-number</code></li>
+        <li><code>cc-exp</code></li>
+        <li><code>cc-exp-month</code></li>
+        <li><code>cc-exp-year</code></li>
+        <li><code>cc-csc</code></li>
+        <li><code>cc-type</code></li>
+        <li><code>transaction-currency</code></li>
+        <li><code>transaction-amount</code></li>
+        <li><code>language</code></li>
+        <li><code>bday</code></li>
+        <li><code>bday-day</code></li>
+        <li><code>bday-month</code></li>
+        <li><code>bday-year</code></li>
+        <li><code>sex</code></li>
+        <li><code>url</code></li>
+        <li><code>photo</code></li>
+      </ul>
+
+    </article>
+
+    <article>
+      <h2>Dates</h2>
+      <p>Do not use dropdown/select. Entering the dates in with a keyboard is far quicker than navigating dropdown lists. If a datepicker is desired, do not make it the only method to provide the data; have it as a supplemental input method second to the input field.</p>
+    </article>
+
+    <article>
+      <h2>Multi-page forms</h2>
+      <p>For pages with “previous” and “next”, use hyperlinks where possible with appropriate hyperlink markup.</p>
+      <h3>Paging</h3>
+<pre rel="HTML" class="code">
+<code>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page1"</span> <span class="na">rel=</span><span class="s">"prev"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;</span> | <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page3"</span> <span class="na">rel=</span><span class="s">"next"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;</span>
+</code>
+</pre>
+
+      <h3>Progress indicator</h3>
+      <p>Always indicate where the person is in the form (how many pages remain, how many total pages).</p>
+      
+    </article>
 
 
   </main>

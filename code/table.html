@@ -207,7 +207,70 @@
   <main id="main">
     <h1>Data tables</h1>
 
+    <article>
+      <p><a href="https://www.w3.org/WAI/tutorials/tables/" class="ext-site">Tables</a> are specifically for tabular data. Tables are not easily navigable and clear, however, utilizing the proper code will dramatically improve navigating tabular data.</p>
 
+      <p>The table caption acts as a title for the table. Avoid using the <code>summary</code> attribute, which is deprecated.</p>
+
+      <p>The code is based on <a href="http://adrianroselli.com/2018/02/tables-css-display-properties-and-aria.html" class="ext-site">Adrien Roselli&rsquo;s responsive table code</a> as well as <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role" class="ext-site">Mozilla&rsquo;s rowgroup role best practices</a>.</p>
+
+      <p>Example table with column and row headings.</p>
+<pre rel="HTML" class="code">
+<code>
+<table role="table">
+ <caption>Books Read in 2019</caption>
+ <thead role="rowgroup">
+  <tr role="row">
+    <th scope="col" role="columnheader">Title</th>
+    <th scope="col" role="columnheader">Author</th>
+    <th scope="col" role="columnheader">Page count</th>
+  </tr>
+ </thead>
+ <tbody role="rowgroup">
+  <tr role="row">
+    <th role="cell" scope="row">Don Quixote</th>
+    <td role="cell">Miguel de Cervantes</td>
+    <td role="cell">1023 pages</td>
+  </tr>
+  <tr role="row">
+    <th role="cell" scope="row">Moby Dick</th>
+    <td role="cell">Herman Melville</td>
+    <td role="cell">720 pages</td>
+  </tr>
+ </tbody>
+</table>
+</code>
+</pre>
+
+<p>Example table with column headings only.</p>
+<pre rel="HTML" class="code">
+<code>
+<table role="table">
+ <caption>New York Times Best Sellers 5 May 2019</caption>
+ <thead role="rowgroup">
+  <tr role="row">
+    <th scope="col" role="columnheader">Rank</th>
+    <th scope="col" role="columnheader">Title</th>
+    <th scope="col" role="columnheader">Author</th>
+  </tr>
+ </thead>
+ <tbody role="rowgroup">
+  <tr role="row">
+    <td role="cell">1st</td>
+    <td role="cell">Redemption</td>
+    <td role="cell">David Baldacci</td>
+  </tr>
+  <tr role="row">
+    <td role="cell">2nd</td>
+    <td role="cell">The Mister</td>
+    <td role="cell">E L James</td>
+  </tr>
+ </tbody>
+</table>
+</code>
+</pre>
+
+    </article>
 
   </main>
 
