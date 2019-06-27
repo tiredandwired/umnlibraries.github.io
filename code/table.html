@@ -217,56 +217,56 @@
       <p>Example table with column and row headings.</p>
 <pre rel="HTML" class="code">
 <code>
-<table role="table">
- <caption>Books Read in 2019</caption>
- <thead role="rowgroup">
-  <tr role="row">
-    <th scope="col" role="columnheader">Title</th>
-    <th scope="col" role="columnheader">Author</th>
-    <th scope="col" role="columnheader">Page count</th>
-  </tr>
- </thead>
- <tbody role="rowgroup">
-  <tr role="row">
-    <th role="cell" scope="row">Don Quixote</th>
-    <td role="cell">Miguel de Cervantes</td>
-    <td role="cell">1023 pages</td>
-  </tr>
-  <tr role="row">
-    <th role="cell" scope="row">Moby Dick</th>
-    <td role="cell">Herman Melville</td>
-    <td role="cell">720 pages</td>
-  </tr>
- </tbody>
-</table>
+<span class="nt">&lt;table</span> <span class="na">role=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;caption&gt;</span>Books Read in 2019<span class="nt">&lt;/caption&gt;</span>
+ <span class="nt">&lt;thead</span> <span class="na">role=</span><span class="s">"rowgroup"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>Author<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>Page count<span class="nt">&lt;/th&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+ <span class="nt">&lt;/thead&gt;</span>
+ <span class="nt">&lt;tbody</span> <span class="na">role=</span><span class="s">"rowgroup"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">role=</span><span class="s">"cell"</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>Don Quixote<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Miguel de Cervantes<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>1023 pages<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">role=</span><span class="s">"cell"</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>Moby Dick<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span>&gt;</span>Herman Melville<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>720 pages<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+ <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
 </code>
 </pre>
 
 <p>Example table with column headings only.</p>
 <pre rel="HTML" class="code">
 <code>
-<table role="table">
- <caption>New York Times Best Sellers 5 May 2019</caption>
- <thead role="rowgroup">
-  <tr role="row">
-    <th scope="col" role="columnheader">Rank</th>
-    <th scope="col" role="columnheader">Title</th>
-    <th scope="col" role="columnheader">Author</th>
-  </tr>
- </thead>
- <tbody role="rowgroup">
-  <tr role="row">
-    <td role="cell">1st</td>
-    <td role="cell">Redemption</td>
-    <td role="cell">David Baldacci</td>
-  </tr>
-  <tr role="row">
-    <td role="cell">2nd</td>
-    <td role="cell">The Mister</td>
-    <td role="cell">E L James</td>
-  </tr>
- </tbody>
-</table>
+<span class="nt">&lt;table</span> <span class="na">role=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;caption&gt;</span>New York Times Best Sellers 5 May 2019<span class="nt">&lt;/caption&gt;</span>
+ <span class="nt">thead</span> <span class="na">role=</span><span class="s">"rowgroup"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>Rank<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>Author<span class="nt">&lt;/th&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+ <span class="nt">&lt;/thead&gt;</span>
+ <span class="nt">&lt;tbody</span> <span class="na">role=</span><span class="s">"rowgroup"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>1<sup>st</sup><span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Redemption<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>David Baldacci<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>2<sup>nd</sup><span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>The Mister<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>E L James<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+ <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
 </code>
 </pre>
 
