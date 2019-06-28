@@ -178,7 +178,7 @@
   <main id="main">
 
     <h1>Writing content</h1>
-    <p>All content follows the <a href="https://www.chicagomanualofstyle.org/book/ed17/frontmatter/toc.html" class="ext-site">Chicago Manual of Style</a> unless otherwise noted in the content guidelines. When writing news articles, such as on Continuum, follow Associated Press (AP) style guides instead. Review all <a href="https://university-relations.umn.edu/resources/editorial-style" class="ext-site">University-level editorial styles</a>.</p>
+    <p>All content follows the <a href="https://www.chicagomanualofstyle.org/book/ed17/frontmatter/toc.html" aria-describedby="ext-site">Chicago Manual of Style</a> unless otherwise noted in the content guidelines. When writing news articles, such as on Continuum, follow Associated Press (AP) style guides instead. Review all <a href="https://university-relations.umn.edu/resources/editorial-style" aria-describedby="ext-site">University-level editorial styles</a>.</p>
 
     <section id="titles">
       <h2>Titles and headings</h2>
@@ -228,7 +228,7 @@
       <h2>Simplified writing</h2>
       <article id="writing">
         <h3 class="h2">Literacy level</h3>
-        <p>Use <a href="http://www.hemingwayapp.com/" class="ext-site">Hemingway App</a> as a measure to keep your content at or below the 8<sup>th</sup> grade level, using the techniques outlined below.</p>
+        <p>Use <a href="http://www.hemingwayapp.com/" aria-describedby="ext-site">Hemingway App</a> as a measure to keep your content at or below the 8<sup>th</sup> grade level, using the techniques outlined below.</p>
 
         <p>Just because someone can read at a PhD level doesn&rsquo;t mean they want to. Simplified writing doesn&rsquo;t equal a simplified message. If content comes in at a readability score at the 7<sup>th</sup> grade level, reading time drops by 60%, and comprehension goes up by 75%.</p>
 
@@ -341,6 +341,24 @@
           &ldquo;<a href="#">Events &amp; workshops</a> lists more event details.&rdquo; (yes)
         </p>
       </article>
+
+      <article>
+        <h3 class="h2">Links 2</h3>
+        <p>The anchor element must have content inside, preferably text.</p>
+        <p>The text of the URL is not the URL itself or include the word &ldquo;link&rdquo; (e.g. not <code>&lt;a href="https://www.lib.umn.edu"&gt;https://www.lib.umn.edu&lt;/a&gt;</code>; &ldquo;libraries website link&rdquo; should be &ldquo;University Libraries&rdquo; so it&rsquo;s long enough but not irrelevant or redundant).</p>
+        <p>The text must be able to stand alone without much context yet be brief. <a href="https://www.nngroup.com/articles/better-link-labels/" aria-describedby="ext-site">Link tips from NNgroup</a>:</p>
+        <ul>
+          <li>Specific: communicate what users will find (not vague)</li>
+          <li>Sincere: a link is a promise (labels set expectations)</li>
+          <li>Substantial: scan vs. read online, so links must stand alone</li>
+          <li>Succinct: don&rsquo;t waste words, &ldquo;frontload&rdquo; links (1<sup>st</sup> 2 words)</li>
+        </ul>
+
+        <p>Avoid &ldquo;click&rdquo;, &ldquo;click here&rdquo;, &ldquo;learn more&rdquo;, &ldquo;read more&rdquo;. These, when put in a list of all links on a page, mean nothing.</p>
+        <p>If the anchor contains an icon or image, the icon or image must be accompanied by text that is at minimum accessible to screen readers but preferably visible for all people.</p>
+        <p>An anchor may wrap around multiple objects including block level elements.</p>
+      </article>
+
     </section>
 
     <section id="people">
