@@ -24,7 +24,7 @@
   list-style: none;
 }
 
-.flex-square li {
+.flex-square > li {
   padding: 1rem;
   margin: 0 1rem 1rem 0;
 }
@@ -63,9 +63,15 @@
 /* WIDTH */
 .w-50 {
   display: block;
-  width: calc(50% - (var(--m-norm) * 1rem));
+  width: calc(50% - (var(--m-norm) * 1rem - 0.5rem));
   float: left;
+  margin-right: 1rem;
 }
+.w-50:last-child {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
 .w-100 {
   display: block;
   width: 100%;
