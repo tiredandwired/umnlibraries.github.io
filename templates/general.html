@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Content | Cura Design System</title>
+  <title>Templates | Cura Design System</title>
   <meta name="description" content="University of Minnesota Libraries Design System">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -89,7 +89,7 @@
           </g>
         </svg>
         Principles</a>
-      <a href="/content/" aria-current="page">
+      <a href="/content/">
         <svg aria-hidden="true" class="glyph" focusable="false" viewBox="0 0 92 85">
           <g>
             <path d="M23.55,29.06c1.74-2.45,5.84-2.45,7.58,0l1.72,2.43v-19.8H21.78l0.03,19.82L23.55,29.06z"></path>
@@ -125,7 +125,7 @@
         	</g>
         </svg>
         Code</a>
-      <a href="/templates/">
+      <a href="/templates/" aria-current="page">
         <svg aria-hidden="true" class="glyph" focusable="false" viewBox="0 0 92 85">
           <g>
             <path d="M40.31,33.5c-0.57,1.09-1,2.26-1.29,3.49l-21.83-8.07c0.57-0.8,0.97-1.75,1.17-2.78 c0.03-0.23,0.09-0.46,0.11-0.72L40.31,33.5z"></path>
@@ -145,66 +145,40 @@
     <nav role="navigation" aria-label="Breadcrumb">
       <ol>
         <li><a href="/">Home</a></li>
-        <li><a href="/content/">Content</a></li>
-        <li><a href="/content/naming.html" aria-current="page">Alternative text</a></li>
+        <li><a href="/templates/">Templates</a></li>
+        <li><a href="/templates/index.html" aria-current="page">Overview</a></li>
       </ol>
     </nav>
 
   </header>
 
-  <nav role="navigation" aria-label="Content" class="nav-sub">
+  <nav role="navigation" aria-label="Content">
     <ul class="list-links">
-      <li><a href="/content/index.html">Overview</a></li>
-      <li><a href="/content/language.html">Language</a></li>
+      <li><a href="/templates/index.html" aria-current="page">Overview</a></li>
+      <li><a href="/templates/primary.html">Primary site patterns</a></li>
       <ul>
-        <li><a href="/content/language.html#voice">Voice and tone</a></li>
-        <li><a href="/content/language.html#pov">Point of view</a></li>
-        <li><a href="/content/language.html#gender">Gender</a></li>
-        <li><a href="/content/language.html#people">Referring to people</a></li>
+        <li><a href="/templates/primary.html#semantic">Semantic HTML</a></li>
+        <li><a href="/principles/primary.html#landmark">Landmarks</a></li>
+        <li><a href="/principles/primary.html#heading">Heading</a></li>
       </ul>
-      <li><a href="/content/naming.html">Naming</a></li>
-      <ul>
-        <li><a href="/content/naming.html#action">Precise, actionable language</a></li>
-        <li><a href="/content/naming.html#meaning">Meaningful naming</a></li>
-        <li><a href="/content/naming.html#jargon">Jargon and acronyms</a></li>
-        <li><a href="/content/naming.html#urls">Friendly URLs</a></li>
-      </ul>
-      <li><a href="/content/grammar.html">Grammar and mechanics</a></li>
-      <ul>
-        <li><a href="/content/grammar.html#active">Active voice</a></li>
-        <li><a href="/content/grammar.html#exaggerated">Exaggerated and informal parts of speech</a></li>
-        <li><a href="/content/grammar.html#idioms">Idioms, metaphors, clich&eacute;s, and colloquialisms</a></li>
-        <li><a href="/content/grammar.html#casing">Sentence casing</a></li>
-        <li><a href="/content/grammar.html#slashes">Letters following slashes</a></li>
-        <li><a href="/content/grammar.html#writing">Simplified writing</a></li>
-      </ul>
-      <li><a href="/content/alt.html" aria-current="page">Alternative text</a></li>
-      <li><a href="/content/files.html">Files</a></li>
-      <li><a href="/content/glossary.html">Glossary</a></li>
     </ul>
   </nav>
+
   <main id="main">
+    <h1>General template information</h1>
 
-    <h1>Alternative text</h1>
-    <article>
-      <p>Alternative text, or alt text, is necessary for screen readers to &ldquo;describe&rdquo; images, so the content is accessible to people with impaired vision, or people that have disabled images for cognitive impairments or data limitations. Alt text needs to be as brief yet meaningful as possible given the surrounding text, rather than just a filename, for example.</p>
+    <article id="urls">
+      <h2>Friendly URLs</h2>
+      <p>Provide brief precise friendly URLs to individual web pages. Avoid replicating concepts within the URL. For instance, if the web page is within a subsite, take the subsite path into account to avoid word duplication.</p>
 
-      <p>Avoid any redundancy; those who have to listen to the web all day can hear a lot of unnecessary repetition. If the image contains something the surrounding text doesn&rsquo;t convey, describe it in the alt attribute.</p>
+      <p>Also, all characters must be basic alphabetical and numerical entities. Avoid spaces, quotations, and any other punctuation that may cause a browser to misinterpret the file path.</p>
 
-      <p>If the text included in the alt attribute benefits other people, use a visible text option such as a wrapping <code>&lt;figure&gt;</code> with accompanying <code>&lt;figcaption&gt;</code>.</p>
-
-      <p>In cases where the accompanying text already directly mirrors the content of the image, the alt text should be left blank, so that it isn&rsquo;t duplicated.</p>
-
-      <p>Avoid starting alt text with &ldquo;This is an image of&rdquo;, &ldquo;Photo&rdquo; or &ldquo;Photo of&rdquo;, &ldquo;A view of&rdquo;, &ldquo;You see&rdquo;, &ldquo;Screenshot of&rdquo;, or &ldquo;Thumbnail&rdquo;.</p>
-
-      <p>Use the <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" class="ext-site">alt decision tree</a> to determine how to write alt text.</p>
-
-      <h2>Example</h2>
-      <p>&ldquo;PNRs304.jpg&rdquo; (no)<br />
+      <h3>Example</h3>
+      <p><code>/about/about "libraries" in-TC-campus</code> (no)<br />
         vs.<br />
-        &ldquo;Screenshot from Parks and Rec.&rdquo; (better)<br />
+        <code>/about/about-libraries</code> (better)<br />
         vs.<br />
-        &ldquo;&rdquo; (empty alt attribute) with a <code>&lt;figcaption&gt;</code> element including the text: A self-referential screencap from Parks &amp; Recreation, showing character Tom Haverford looking at an uncaptioned photo of himself. The subtitle reads, &ldquo;What is he thinking?&rdquo; (yes)
+        <code>/about/libraries</code> (yes)
       </p>
     </article>
 
