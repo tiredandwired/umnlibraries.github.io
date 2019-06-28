@@ -1,5 +1,31 @@
 /***UTILITIES***/
 
+/* FLEX BASICS */
+.flex {
+  margin: 0 auto;
+  display: flex;
+}
+
+.flex > * {
+  margin: 1rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+.flex:nth-of-type(5) > *:first-of-type {
+  flex-grow: 2;
+  flex-shrink: 2;
+  flex-basis: 2rem;
+}
+
+.flex:nth-of-type(6) > *:nth-of-type(2) {
+  flex-grow: 4;
+  flex-shrink: 4;
+  flex-basis: 3rem;
+}
+
+
 /* FLEX OPTIONS */
 .row {
   flex-direction: row;
@@ -7,6 +33,8 @@
 .column {
   flex-direction: column;
 }
+
+
 
 .nowrap, .nowrap-md {
   flex-wrap: nowrap;
@@ -67,6 +95,7 @@
   float: left;
   margin-right: 1rem;
 }
+
 .w-50:last-child {
   margin-right: 0;
   margin-left: 0.5rem;
