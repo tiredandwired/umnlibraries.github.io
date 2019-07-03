@@ -194,12 +194,12 @@
       <dl>
         <dt>Photography</dt>
         <dd>Examples: building exteriors, person profiles, building spaces</dd>
-        <dd>optimized progressive <acronym>JPG</acronym> preferred</dd>
+        <dd>Preferred: optimized progressive <acronym>JPG</acronym></dd>
         <dd>Do not use: <acronym>BMP</acronym>, <acronym>TIFF</acronym></dd>
 
         <dt>Illustrations</dt>
         <dd>Examples: logos, label enhancements (e.g. an &ldquo;x&rdquo; next to word &ldquo;close&rdquo;), icons</dd>
-        <dd><acronym>SVG</acronym> preferred</dd>
+        <dd>Preferred: <acronym>SVG</acronym></dd>
         <dd>Do not use: <acronym>GIF</acronym></dd>
       </dl>
 
@@ -207,57 +207,62 @@
       <p>When adding images outside of Drupal, follow the <a href="/code/images.html#optimization">optimization techniques</a>, described in Photoshop CC steps.</p>
     </article>
 
-    <article id="purpose">
+    <section id="purpose">
       <h2>Image purpose</h2>
-      <p>Determine if the image is decorative or more substantial.</p>
+      <article>
+        <h3 class="h2">General guidance</h3>
+        <p>Determine if the image is decorative or more substantial. When selecting images, follow these standard practices.</p>
+        <dl>
+          <dt>Avoid placing text in or on top of an image</dt>
+          <dd>Text inside an image is not accessible and may become pixelated and difficult to read. Text on top of an image is more difficult to read with the background noise.</dd>
 
-      <p>When selecting images, follow these standard practices.</p>
-      <dl>
-        <dt>Avoid placing text in or on top of an image</dt>
-        <dd>Text inside an image is not accessible and may become pixelated and difficult to read. Text on top of an image is more difficult to read with the background noise.</dd>
+          <dt>Do not use photos of people without photo releases</dt>
+          <dd>Respect individual rights to anonymity.</dd>
 
-        <dt>Do not use photos of people without photo releases</dt>
-        <dd>Respect individual rights to anonymity.</dd>
+          <dt>Avoid proprietary images from other places without consent</dt>
+          <dd>Taking images from the web that do not expressly state their copyright falls within the University Libraries’ use is prohibited.</dd>
 
-        <dt>Avoid proprietary images from other places without consent</dt>
-        <dd>Taking images from the web that do not expressly state their copyright falls within the University Libraries’ use is prohibited.</dd>
+          <dt>Use accurate images</dt>
+          <dd>Avoid stock photo websites outside of the University-provided resources. Images must accurately represent spaces, services, and people.</dd>
+        </dl>
+      </article>
 
-        <dt>Use accurate images</dt>
-        <dd>Avoid stock photo websites outside of the University-provided resources. Images must accurately represent spaces, services, and people.</dd>
-      </dl>
+      <article>
+        <h3 class="h2">Decorative images</h3>
+        <p>From <a href="https://www.w3.org/WAI/tutorials/images/decorative/" aria-describedby="ext-site">WAI Decorative Images</a>:</p>
+        <p>Decorative images do not add information to the content of a page. For example, the information provided by the image might already be given using adjacent text, or the image might be included to make the website more visually attractive.</p>
 
-      <h3>Decorative images</h3>
-      <p>From <a href="https://www.w3.org/WAI/tutorials/images/decorative/" aria-describedby="ext-site">WAI Decorative Images</a>:</p>
-      <p>Decorative images do not add information to the content of a page. For example, the information provided by the image might already be given using adjacent text, or the image might be included to make the website more visually attractive.</p>
+        <ul>
+          <li><strong>Drupal</strong>: alt text and figcaption are blank</strong></li>
+          <li><strong>Other</strong>: see <a href="/code/images.html#decorative">decorative image code</a></li>
+        </ul>
 
-      <ul>
-        <li><strong>Drupal</strong>: alt text and figcaption are blank</strong></li>
-        <li><strong>Other</strong>: see <a href="/code/images.html#decorative">decorative image code</a></li>
-      </ul>
+        <h3>Informative image</h3>
+        <p>From <a href="https://www.w3.org/WAI/tutorials/images/informative/" aria-describedby="ext-site">WAI Informative Images</a>:</p>
+        <p>Informative images convey a simple concept or information that can be expressed in a short phrase or sentence. They may be used to label other information (such as a phone for &ldquo;telephone&rdquo;), to supplement other information, to convey succinct information, or to convey an impression or emotion.</p>
 
-      <h3>Informative image</h3>
-      <p>From <a href="https://www.w3.org/WAI/tutorials/images/informative/" aria-describedby="ext-site">WAI Informative Images</a>:</p>
-      <p>Informative images convey a simple concept or information that can be expressed in a short phrase or sentence. They may be used to label other information (such as a phone for &ldquo;telephone&rdquo;), to supplement other information, to convey succinct information, or to convey an impression or emotion.</p>
+        <ul>
+          <li><strong>Drupal</strong>: In &ldquo;alt text&rdquo;, use a short phrase or a couple words to describe the image</li>
+          <li><strong>Other</strong>: see <a href="/code/images.html#informative">informative image code</a></li>
+        </ul>
+      </article>
 
-      <ul>
-        <li><strong>Drupal</strong>: In &ldquo;alt text&rdquo;, use a short phrase or a couple words to describe the image</li>
-        <li><strong>Other</strong>: see <a href="/code/images.html#informative">informative image code</a></li>
-      </ul>
+      <article>
+        <h3>Complex image (e.g. charts)</h3>
+        <p>From <a href="https://www.w3.org/WAI/tutorials/images/complex/" aria-describedby="ext-site">WAI Complex Images</a>:</p>
+        <p>Complex images contain substantial information than can be conveyed in a short phrase or sentence, such as graphs, charts, diagrams, and maps.</p>
 
-      <h3>Complex image (e.g. charts)</h3>
-      <p>From <a href="https://www.w3.org/WAI/tutorials/images/complex/" aria-describedby="ext-site">WAI Complex Images</a>:</p>
-      <p>Complex images contain substantial information than can be conveyed in a short phrase or sentence, such as graphs, charts, diagrams, and maps.</p>
+        <p>Present the visual and textual data together for best information dissemination. Provide both an image and a data table.</p>
 
-      <p>Present the visual and textual data together for best information dissemination. Provide both an image and a data table.</p>
+        <p>A more technical option is to merge the visual data and textual data displays for objects like charts, by building accessible SVG and coding the vectors to behave like a data table (&ldquo;2 in 1&rdquo;).</p>
 
-      <p>A more technical option is to merge the visual data and textual data displays for objects like charts, by building accessible SVG and coding the vectors to behave like a data table (&ldquo;2 in 1&rdquo;).</p>
-
-      <ul>
-        <li><strong>Drupal</strong>: In &ldquo;alt text&rdquo;, short description of what the image is (e.g. &ldquo;2014 first quarter attendance bar chart&rdquo;); in &ldquo;figure caption&rdquo;, describe the content in context of the page (e.g. &ldquo;Display of monthly and total visitors by type &mdash; student, faculty, staff, and community member &mdash;  for the first quarter in 2014&rdquo;)</li>
-      	<li>Include a data table that mirrors the content of the visual representation (see tables)</li>
-        <li><strong>Other</strong>: see <a href="/code/images.html#complex">complex image code</a></li>
-      </ul>
-    </article>
+        <ul>
+          <li><strong>Drupal</strong>: In &ldquo;alt text&rdquo;, short description of what the image is (e.g. &ldquo;2014 first quarter attendance bar chart&rdquo;); in &ldquo;figure caption&rdquo;, describe the content in context of the page (e.g. &ldquo;Display of monthly and total visitors by type &mdash; student, faculty, staff, and community member &mdash;  for the first quarter in 2014&rdquo;)</li>
+        	<li>Include a data table that mirrors the content of the visual representation (see tables)</li>
+          <li><strong>Other</strong>: see <a href="/code/images.html#complex">complex image code</a></li>
+        </ul>
+      </article>
+    </section>
 
     <article id="alt">
       <h2>Alternative text</h2>
