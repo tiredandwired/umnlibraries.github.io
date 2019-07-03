@@ -171,6 +171,12 @@
         <li><a href="/content/phrases.html#exaggerated">Exaggerated and informal parts of speech</a></li>
       </ul>
       <li><a href="/content/images.html" aria-current="page">Images</a></li>
+      <ul>
+        <li><a href="/content/images.html#formats">Formats</a></li>
+        <li><a href="/content/images.html#purpose">Image purpose</a></li>
+        <li><a href="/content/images.html#alt">Alternative text</a></li>
+        <li><a href="/content/images.html#captions">Figure captions</a></li>
+      </ul>
       <li><a href="/content/files.html">Files</a></li>
       <li><a href="/content/glossary.html">Glossary</a></li>
     </ul>
@@ -178,7 +184,82 @@
   <main id="main">
     <h1>Images</h1>
 
-    <article>
+    <div class="lead">
+      <p>Use images sparingly.</p>
+      <p>Images are a significant source of slow web experiences. In some cases, imagery enhances the message of the text. However, in many more cases an image adds little to the message and instead may provide an unintentional lesser experience.</p>
+    </div>
+
+    <article id="formats">
+      <h2>Formats</h2>
+      <dl>
+        <dt>Photography</dt>
+        <dd>Examples: building exteriors, person profiles, building spaces</dd>
+        <dd>optimized progressive <acronym>JPG</acronym> preferred</dd>
+        <dd>Do not use: <acronym>BMP</acronym>, <acronym>TIFF</acronym></dd>
+
+        <dt>Illustrations</dt>
+        <dd>Examples: logos, label enhancements (e.g. an &ldquo;x&rdquo; next to word &ldquo;close&rdquo;), icons</dd>
+        <dd><acronym>SVG</acronym> preferred</dd>
+        <dd>Do not use: <acronym>GIF</acronym></dd>
+      </dl>
+
+      <p>Do not use animated <acronym>GIF</acronym>s or any animated images that lack controls (pause and stop) over the animation.</p>
+      <p>When adding images outside of Drupal, follow the <a href="/code/images.html#optimization">optimization techniques</a>, described in Photoshop CC steps.</p>
+    </article>
+
+    <article id="purpose">
+      <h2>Image purpose</h2>
+      <p>Determine if the image is decorative or more substantial.</p>
+
+      <p>When selecting images, follow these standard practices.</p>
+      <dl>
+        <dt>Avoid placing text in or on top of an image</dt>
+        <dd>Text inside an image is not accessible and may become pixelated and difficult to read. Text on top of an image is more difficult to read with the background noise.</dd>
+
+        <dt>Do not use photos of people without photo releases</dt>
+        <dd>Respect individual rights to anonymity.</dd>
+
+        <dt>Avoid proprietary images from other places without consent</dt>
+        <dd>Taking images from the web that do not expressly state their copyright falls within the University Libraries’ use is prohibited.</dd>
+
+        <dt>Use accurate images</dt>
+        <dd>Avoid stock photo websites outside of the University-provided resources. Images must accurately represent spaces, services, and people.</dd>
+      </dl>
+
+      <h3>Decorative images</h3>
+      <p>From <a href="https://www.w3.org/WAI/tutorials/images/decorative/" aria-describedby="ext-site">WAI Decorative Images</a>:</p>
+      <p>Decorative images do not add information to the content of a page. For example, the information provided by the image might already be given using adjacent text, or the image might be included to make the website more visually attractive.</p>
+
+      <ul>
+        <li><strong>Drupal</strong>: alt text and figcaption are blank</strong></li>
+        <li><strong>Other</strong>: see <a href="/code/images.html#decorative">decorative image code</a></li>
+      </ul>
+
+      <h3>Informative image</h3>
+      <p>From <a href="https://www.w3.org/WAI/tutorials/images/informative/" aria-describedby="ext-site">WAI Informative Images</a>:</p>
+      <p>Informative images convey a simple concept or information that can be expressed in a short phrase or sentence. They may be used to label other information (such as a phone for &ldquo;telephone&rdquo;), to supplement other information, to convey succinct information, or to convey an impression or emotion.</p>
+
+      <ul>
+        <li><strong>Drupal</strong>: In &ldquo;alt text&rdquo;, use a short phrase or a couple words to describe the image</li>
+        <li><strong>Other</strong>: see <a href="/code/images.html#informative">informative image code</a></li>
+      </ul>
+
+      <h3>Complex image (e.g. charts)</h3>
+      <p>From <a href="https://www.w3.org/WAI/tutorials/images/complex/" aria-describedby="ext-site">WAI Complex Images</a>:</p>
+      <p>Complex images contain substantial information than can be conveyed in a short phrase or sentence, such as graphs, charts, diagrams, and maps.</p>
+
+      <p>Present the visual and textual data together for best information dissemination. Provide both an image and a data table.</p>
+
+      <p>A more technical option is to merge the visual data and textual data displays for objects like charts, by building accessible SVG and coding the vectors to behave like a data table (&ldquo;2 in 1&rdquo;).</p>
+
+      <ul>
+        <li><strong>Drupal</strong>: In &ldquo;alt text&rdquo;, short description of what the image is (e.g. &ldquo;2014 first quarter attendance bar chart&rdquo;); in &ldquo;figure caption&rdquo;, describe the content in context of the page (e.g. &ldquo;Display of monthly and total visitors by type &mdash; student, faculty, staff, and community member &mdash;  for the first quarter in 2014&rdquo;)</li>
+      	<li>Include a data table that mirrors the content of the visual representation (see tables)</li>
+        <li><strong>Other</strong>: see <a href="/code/images.html#complex">complex image code</a></li>
+      </ul>
+    </article>
+
+    <article id="alt">
       <h2>Alternative text</h2>
       <p>Alternative text, or alt text, is necessary for screen readers to &ldquo;describe&rdquo; images, so the content is accessible to people with impaired vision, or people that have disabled images for cognitive impairments or data limitations. Alt text needs to be as brief yet meaningful as possible given the surrounding text, rather than just a filename, for example.</p>
 
@@ -195,10 +276,24 @@
       <h2>Example</h2>
       <p>&ldquo;PNRs304.jpg&rdquo; (no)<br />
         vs.<br />
-        &ldquo;Screenshot from Parks and Rec.&rdquo; (better)<br />
+        &ldquo;Screenshot from Parks and Rec&rdquo; (better)<br />
         vs.<br />
-        &ldquo;&rdquo; (empty alt attribute) with a <code>&lt;figcaption&gt;</code> element including the text: A self-referential screencap from Parks &amp; Recreation, showing character Tom Haverford looking at an uncaptioned photo of himself. The subtitle reads, &ldquo;What is he thinking?&rdquo; (yes)
+        &ldquo;Screenshot from Parks and Rec&rdquo; with a <code>&lt;figcaption&gt;</code> element including the text: A self-referential screencap from Parks &amp; Recreation, showing character Tom Haverford looking at an uncaptioned photo of himself. The subtitle reads, &ldquo;What is he thinking?&rdquo; (yes)
       </p>
+    </article>
+
+    <article id="caption">
+      <h2>Figure captions</h2>
+      <p>Captions are visible, and the text is not italicized to improve readability. To distinguish it from surrounding text, both the image and caption are centered on the page when not full width, and the caption has a 90% size.</p>
+      <ul>
+        <li>Adding captions optimizes search results as well as accessibility.</li>
+        <li>The caption adds context to the image, not just duplicates what the reader already sees.</li>
+        <li>Captions are written in complete sentences with who, what, where, when and (sometimes) why.</li>
+        <li>Target length for captions is no more than two short sentences.</li>
+        <li>Acknowledge the person who took the photo or the image source. Use the following syntax for acknowledgement: &ldquo;Photo courtesy of [x].&rdquo;</li>
+      </ul>
+
+      <p><a href="https://www.scottohara.me/blog/2019/01/21/how-do-you-figure.html" aria-describedby="ext-site">Captions are not a substitute for <code>alt</code> text</a>. &ldquo;If an image is given an empty alt, then the <code>&lt;figcaption&gt;</code> is in effect describing nothing. And that doesn&rsquo;t make much sense, does it?&rdquo;  When <code>&lt;figure&gt;</code> is used, <code>alt</code> text is required (no empty attribute).</p>
     </article>
 
   </main>

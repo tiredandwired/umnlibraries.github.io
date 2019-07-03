@@ -13,5 +13,6 @@ a:hover, a:focus {
 }
 
 [aria-describedby="ext-site"]::after {
-    content: '\21D7';
+    /*content: '\21D7';*/
+    content: ' \21F1';
 }
