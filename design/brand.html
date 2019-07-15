@@ -15,6 +15,24 @@
     color: currentColor;
     fill: currentColor;
   }
+  .example nav {
+  display: flex;
+  text-align: right;
+  }
+  .example nav > a {
+    display: inline-block;
+    padding: 1rem;
+  }
+  .example nav > a:first-child {
+    margin-right: auto;
+  }
+
+  .example nav:first-child {
+    background-color: #7a0019;
+  }
+  .example nav:first-child > a {
+    color: #fff;
+  }
   </style>
   <link rel="stylesheet" type="text/css" href="/s/all.css">
 </head>
@@ -174,8 +192,6 @@
         <li><a href="/design/type.html#measure">Measure</a></li>
         <li><a href="/design/type.html#height">Line height</a></li>
       </ul>
-      <li><a href="/design/links.html">Links</a></li>
-      <li><a href="/design/sections.html">Content sections</a></li>
     </ul>
   </nav>
 
@@ -191,23 +207,18 @@
     <article id="header">
       <h2>Header</h2>
       <p>Summary: The University and Libraries logos must be in the correct place with minimal sizes as well as the University global navigation in the upper right.</p>
+      <p>The header comprises of 2 rows. The top row focuses on University of Minnesota branding, which includes the wordmark and University global navigation, and the second row is University Libraries branding, which includes the logo.</p>
       <h3>Favicon</h3>
       <p>The favicon must have the M in either maroon or gold and passing contrast ratio requirements of 3:1 (7.5:1 or greater is preferred) for websites on the umn.edu domain.</p>
 
       <h3>University of Minnesota wordmark</h3>
-      <p>Libraries are required to have the University of Minnesota wordmark, specifically with the &ldquo;Driven to Discover&rdquo; tagline in the upper left corner.</p>
-      <p>The wordmark must have the &ldquo;registered&rdquo; mark and may be an SVG file. The width (specifically of the &ldquo;University of Minnesota&rdquo; text) must be:</p>
+      <p>Libraries are required to have the University of Minnesota wordmark, including the &ldquo;Driven to Discover&rdquo; tagline, in the upper left corner.</p>
+      <p>The wordmark must have the &ldquo;registered&rdquo; mark and may be an SVG file. The width &mdash; specifically of the &ldquo;University of Minnesota&rdquo; text in the logo &mdash; must be:</p>
       <ul>
         <li>220px and 12px margin around it for desktop sizes, and</li>
         <li>170px with 9px margin around it for smaller (mobile) sizes.</li>
       </ul>
-
-      <h3>University Libraries logo</h3>
-      <p>M Libraries logo immediately below the wordmark. The width (from the M to the end of Libraries) must be:</p>
-      <ul>
-        <li>260px and 10px margin around it for desktop sizes, and</li>
-        <li>130px with 5px margin around it for smaller (mobile) sizes.</li>
-      </ul>
+      <p>Though not explicitly stated, the University logo is recommended to have an official University color as the background, either maroon or gold.</p>
 
       <h3>UMN global navigation</h3>
       <p>The University of Minnesota links in the upper right corner:</p>
@@ -217,20 +228,46 @@
         <li>Search box<br />
           The University Libraries have an exception that allows the search box to be a link to the search, to avoid conflict with other searches on the page</li>
       </ul>
+
+      <h3>University Libraries logo</h3>
+      <p>M Libraries logo immediately below the wordmark. The width (from the M to the end of Libraries) must be:</p>
+      <ul>
+        <li>260px and 10px margin around it for desktop sizes, and</li>
+        <li>130px with 5px margin around it for smaller (mobile) sizes.</li>
+      </ul>
+
+      <h3>Example placement</h3>
+      <code class="example">
+        <header>
+          <nav>
+            <a href="/">wordmark</a>
+            <a href="/">OneStop</a>
+            <a href="/">MyU</a>
+            <a href="/">Search</a>
+          </nav>
+          <nav>
+            <a href="/">logo</a>
+          </nav>
+        </header>
+      </code>
+
     </article>
 
     <article id="footer">
       <h2>Footer</h2>
       <p>The footer must contain:</p>
       <ul>
-        <li>&ldquo;University of Minnesota Libraries&rdquo; including administration office address and contact information</li>
+        <li>&ldquo;University of Minnesota Libraries&rdquo; name and link with contact information</li>
         <li>Privacy Statement link</li>
         <li>Copyright statement displaying the current year</li>
       </ul>
-      <p>The recommended format is:</p>
+
+      <h3>Contact information</h3>
+      <p>Summary: &ldquo;University of Minnesota Libraries&rdquo; highly recommended with general contact information preferred.</p>
+      <p>Use this contact block unless the contact information obfuscates better communication channels:</p>
       <pre rel="HTML" class="code">
         <code>
-<span class="nt">&lt;h3&gt;</span>University of Minnesota Libraries<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h3&gt;&lt;a </span><span class="na">href=</span><span class="s">https://www.lib.umn.edu</span><span class="nt">&gt;</span>University of Minnesota Libraries<span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
   <span class="nt">&lt;address&gt;&lt;strong&gt;</span>Libraries Central Administration Office<span class="nt">&lt;/strong&gt;&lt;br /&gt;</span>
   499 Wilson Library<span class="nt">&lt;br /&gt;</span>
   309 19<span class="nt">&lt;sup&gt;</span>th<span class="nt">&lt;/sup&gt;</span> Avenue South<span class="nt">&lt;br /&gt;</span>
@@ -247,6 +284,11 @@
   <span class="nt">&lt;/p&gt;</span>
         </code>
       </pre>
+
+      <h3>Copyright and privacy statements</h3>
+      <p>Copyright statement is required with current year. The privacy statement must be accurate; if the web asset does not meet University Libraries&rsquo; statement, contact Web Development to determine best course of action.</p>
+      <p>Use the following language for copyright statement:</p>
+      <p>&copy; 2019 Regents of the University of Minnesota. All rights reserved. The University of Minnesota is an equal opportunity educator and employer.</p>
     </article>
 
   </main>
