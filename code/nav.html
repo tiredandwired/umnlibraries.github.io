@@ -165,14 +165,14 @@
         <li><a href="/code/general.html#carousels">Carousels</a></li>
       </ul>
       <li><a href="/code/reference.html">Citing sources</a></li>
-      <li><a href="/code/datetime.html">Date and time</a></li>
+      <li><a href="/code/datetime.html">Dates and times</a></li>
       <li><a href="/code/link.html">Links</a></li>
       <ul>
         <li><a href="/code/link.html#basic">Basic</a></li>
         <li><a href="/code/link.html#external">External link</a></li>
         <li><a href="/code/link.html#href">Valid href</a></li>
       </ul>
-      <li><a href="/code/button.html">Button</a></li>
+      <li><a href="/code/button.html">Buttons</a></li>
       <li><a href="/code/images.html">Images</a></li>
       <ul>
         <li><a href="/code/images.html#optimization">Optimization</a></li>
@@ -180,13 +180,13 @@
         <li><a href="/code/images.html#illustrations">Illustrations</a></li>
         <li><a href="/code/images.html#icons">Iconography</a></li>
       </ul>
-      <li><a href="/code/list.html">List</a></li>
+      <li><a href="/code/list.html">Lists</a></li>
       <ul>
         <li><a href="/code/list.html#order">Ordered</a></li>
         <li><a href="/code/list.html#unordered">Unordered</a></li>
       </ul>
-      <li><a href="/code/card.html">Card</a></li>
-      <li><a href="/code/form.html">Form</a></li>
+      <li><a href="/code/card.html">Cards</a></li>
+      <li><a href="/code/form.html">Forms</a></li>
       <ul>
         <li><a href="/code/form.html#lang">Language</a></li>
         <li><a href="/code/form.html#label">Label</a></li>
@@ -198,15 +198,16 @@
         <li><a href="/code/form.html#date">Date</a></li>
         <li><a href="/code/form.html#multi">Multi-page form</a></li>
       </ul>
-      <li><a href="/code/table.html">Table</a></li>
+      <li><a href="/code/table.html">Tables</a></li>
       <li><a href="/code/nav.html" aria-current="page">Navigation</a></li>
       <ul>
-        <li><a href="/code/nav.html#hor">Horizontal</a></li>
-        <li><a href="/code/list.html#ver">Vertical</a></li>
+        <li><a href="/code/nav.html#primary">Primary navigation</a></li>
+        <li><a href="/code/nav.html#submenu">Submenus and table of contents</a></li>
         <li><a href="/code/list.html#bread">Breadcrumb</a></li>
+        <li><a href="/code/list.html#skip">&ldquo;Skip&rdquo; links</a></li>
       </ul>
-      <li><a href="/code/alert.html">Alert</a></li>
-      <li><a href="/code/tooltip.html">Tooltip</a></li>
+      <li><a href="/code/alert.html">Alerts</a></li>
+      <li><a href="/code/tooltip.html">Tooltips</a></li>
     </ul>
   </nav>
 
@@ -214,12 +215,12 @@
   <main id="main">
     <h1>Navigation</h1>
 
-    <article>
+    <article id="primary">
       <h2>Primary navigation</h2>
-      <p>Navigation is easily managed with the <code>&lt;nav&gt;</code> element, where the person is on the homepage.</p>
+      <p>Navigation is easily managed with the <code>&lt;nav&gt;</code> element, where the person is on the homepage. For the main navigation of the site, the value of <code>aria-label</code> is <code>&ldquo;Main&rdquo;</code>.</p>
 <pre rel="HTML" class="code">
 <code>
-<span class="nt">&lt;nav</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;nav</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">aria-label=</span><span class="s">"Main"</span><span class="nt">&gt;</span>
  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">aria-current=</span>"page"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/services"</span><span class="nt">&gt;</span>Services<span class="nt">&lt;/a&gt;</span>
  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/research"</span><span class="nt">&gt;</span>Research<span class="nt">&lt;/a&gt;</span>
@@ -229,13 +230,50 @@
 </pre>
 
       <p>When more than one navigation exists on the page, add an aria-label to differentiate purpose of each navigation, e.g. <code>aria-label="Primary"</code> and <code>aria-label="Research"</code> for a research section.</p>
+    </article>
+
+    <article id="bread">
+      <h2>Breadcrumbs</h2>
+      <p>All pages except the homepage has breadcrumbs on websites. For single page applications, use breadcrumbs if feasible and adds meaning (improves understanding and the application supports save states).</p>
+      <p>Breadcrumbs are hierarchically ordered information architecture, whether representative of a file structure or a virtual structure. Use an ordered list to present it. Breadcrumb navigations are identified with <code>aria-label="Breadcrumb"</code>.</p>
+<pre rel="HTML" class="code">
+<code>
+<span class="nt">&lt;nav</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">aria-label=</span><span class="s">"Breadcrumb"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;ol&gt</span>
+  <span class="nt">&lt;li&gt</span>
+   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>
+   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/about"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>
+   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/about/contact"</span> <span class="na">aria-current=</span>"page"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;</span>
+   <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code>
+</pre>
 
     </article>
 
-    <article>
-      <h2>Horizontal vs. vertical</h2>
+    <article id="submenu">
+      <h2>Submenus and table of contents</h2>
+      <p>Horizontal menus are used for the primary navigation sections including breadcrumbs. Vertical navigations may be used for section submenus or &ldquo;table of contents&rdquo; lists for longer blocks of content.</p>
     </article>
 
+    <article id="skip">
+      <h2>Accessibility skip links</h2>
+      <p>Minimally, provide one primary &ldquo;skip to main content&rdquo; link on every page as the first item within the <code>&lt;body&gt;</code> element.</p>
+      <p>If the page contains an extraordinary amount of content and links, consider adding one or two more &ldquo;skip&rdquo; links to the primary task areas of the content. For instance, on a search results page, the &ldquo;skip&rdquo; links might be &ldquo;skip to search results&rdquo; and &ldquo;skip to search box&rdquo;.</p>
+
+<pre rel="HTML" class="code">
+<code>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#main"</span> <span class="na">class=</span><span class="s">"skip-link"</span><span class="nt">&gt;</span>Skip to main content<span class="nt">&lt;/a&gt;</span>
+</code>
+</pre>
+
+      <p>The &ldquo;skip&rdquo; links may be used by visual or non-visual people, either with keyboards, screen readers, or other assistive technology. Because some people may be sighted, ensure the links are visible on focus.</p>
+    </article>
 
   </main>
 

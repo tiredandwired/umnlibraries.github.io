@@ -165,14 +165,14 @@
         <li><a href="/code/general.html#carousels">Carousels</a></li>
       </ul>
       <li><a href="/code/reference.html">Citing sources</a></li>
-      <li><a href="/code/datetime.html">Date and time</a></li>
+      <li><a href="/code/datetime.html">Dates and times</a></li>
       <li><a href="/code/link.html">Links</a></li>
       <ul>
         <li><a href="/code/link.html#basic">Basic</a></li>
         <li><a href="/code/link.html#external">External link</a></li>
         <li><a href="/code/link.html#href">Valid href</a></li>
       </ul>
-      <li><a href="/code/button.html">Button</a></li>
+      <li><a href="/code/button.html">Buttons</a></li>
       <li><a href="/code/images.html">Images</a></li>
       <ul>
         <li><a href="/code/images.html#optimization">Optimization</a></li>
@@ -180,13 +180,13 @@
         <li><a href="/code/images.html#illustrations">Illustrations</a></li>
         <li><a href="/code/images.html#icons">Iconography</a></li>
       </ul>
-      <li><a href="/code/list.html">List</a></li>
+      <li><a href="/code/list.html">Lists</a></li>
       <ul>
         <li><a href="/code/list.html#order">Ordered</a></li>
         <li><a href="/code/list.html#unordered">Unordered</a></li>
       </ul>
-      <li><a href="/code/card.html">Card</a></li>
-      <li><a href="/code/form.html">Form</a></li>
+      <li><a href="/code/card.html">Cards</a></li>
+      <li><a href="/code/form.html">Forms</a></li>
       <ul>
         <li><a href="/code/form.html#lang">Language</a></li>
         <li><a href="/code/form.html#label">Label</a></li>
@@ -198,15 +198,16 @@
         <li><a href="/code/form.html#date">Date</a></li>
         <li><a href="/code/form.html#multi">Multi-page form</a></li>
       </ul>
-      <li><a href="/code/table.html">Table</a></li>
+      <li><a href="/code/table.html">Tables</a></li>
       <li><a href="/code/nav.html">Navigation</a></li>
       <ul>
-        <li><a href="/code/nav.html#hor">Horizontal</a></li>
-        <li><a href="/code/list.html#ver">Vertical</a></li>
-        <li><a href="/code/list.html#bread">Breadcrumb</a></li>
+        <li><a href="/code/nav.html#primary">Primary navigation</a></li>
+        <li><a href="/code/nav.html#submenu">Submenus and table of contents</a></li>
+        <li><a href="/code/nav.html#bread">Breadcrumb</a></li>
+        <li><a href="/code/nav.html#skip">&ldquo;Skip&rdquo; links</a></li>
       </ul>
-      <li><a href="/code/alert.html">Alert</a></li>
-      <li><a href="/code/tooltip.html">Tooltip</a></li>
+      <li><a href="/code/alert.html">Alerts</a></li>
+      <li><a href="/code/tooltip.html">Tooltips</a></li>
     </ul>
   </nav>
 
@@ -216,26 +217,27 @@
 
     <article id="js">
       <h2>Javascript resiliency</h2>
-      <p>Javascript is a progressive enhancement only. Where javascript is used, it is implemented minimally with thorough unit testing for user experience including accessibility. Avoid frameworks to deliver critical content if possible.</p>
+      <p>Javascript is a progressive enhancement only. Where javascript is used, it is implemented minimally with thorough unit testing for user experience including accessibility. Avoid frameworks, and any javascript, to deliver critical content where possible.</p>
       <p><a href="https://speakerdeck.com/brucel/ijs-conference?slide=48" aria-describedby="ext-site">BuzzFeed monitored javascript timeouts</a> noting 1% failed to load equalling 13 million requests per month. Web assets must be designed for resiliency with graceful degradation.</p>
     </article>
 
     <article id="support">
       <h2>Ubiquitous support</h2>
-      <p>Must have 98% or greater coverage</p>
+      <p>Web tools and languages must have 98% or greater coverage for the audience (e.g. use University Libraries website analytics for https://www.lib.umn.edu)</p>
       <p>Only use elements, attributes, and features that have at least 98% or greater coverage for lib.umn.edu (or intended website audience) on <a href="https://caniuse.com" aria-describedby="ext-site">caniuse.com</a>. Analytics data used for rate determination is for the entire semester (if the current semester is less than three months, move the start point to include the previous semester data).</p>
     </article>
 
     <article id="title">
       <h2><code>Title</code> attribute</h2>
       <p>Do not use the <code>title</code> attribute unless specifically recommended. Better tools exist for most cases where <code>title</code> might be considered, and all of them are more accessible.</p>
+      <p><code>title</code> is never used for images, always use <code>alt</code>.</p>
     </article>
 
     <article id="lang">
       <h2><code>Lang</code> attribute</h2>
       <p>Identifying the language of a content block is essential for technology to interpret content correctly, such as text-to-speech readers applying different language rules for pronunciation.</p>
       <p>Each page is set to present American English at the top of each web document and specified reading direction is left-to-right, <code>&lt;html lang="en-us" dir="ltr"&gt;</code>. This may not be modified.</p>
-      <p>When using any language outside of American English, identify the words using the lang attribute. The lang attribute may be added to most elements but is recommended specifically for: <code>span</code>, <code>p</code>, and <code>blockquote</code>. Use the ISO 639-1 2-letter code to identify the language.</p>
+      <p>When using any language outside of American English, identify the words using the lang attribute. The lang attribute may be added to most elements but is recommended specifically for: <code>span</code>, <code>p</code>, and <code>blockquote</code>. Use the <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" aria-describedby="ext-site">ISO 639-1</a> 2-letter code to identify the language.</p>
 
       <h3>Example</h3>
       <p><code>&lt;p&gt;The world is full of languages. As the saying goes, &lt;span lang="fr"&gt;Une seule langue n&rsquo;est jamais suffisante&lt;/span&gt;.&lt;/p&gt;</code></p>
@@ -245,7 +247,7 @@
     <article id="motion">
       <h2>Reduced motion</h2>
       <blockquote>
-        <p>If you have a vestibular disorder or have certain kinds of migraine or seizure triggers, navigating the web can be a lot like walking through a minefield - you’re perpetually one click away from activating an announced animation. And that’s just for casual browsing.</p>
+        <p>If you have a vestibular disorder or have certain kinds of migraine or seizure triggers, navigating the web can be a lot like walking through a minefield - you’re perpetually one click away from activating an unannounced animation. And that’s just for casual browsing.</p>
         <footer>-<cite>Eric Baily</cite>, CSS Tricks</footer>
       </blockquote>
 
