@@ -265,7 +265,8 @@
       <p>The most traditional approach to pairing a <code>label</code> with an <code>input</code> is to give the <code>input</code> element a unique <code>id</code> that the <code>label</code> can refer to with the <code>for</code> attribute.</p>
 <pre rel="HTML" class="code">
 <code>
-<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"an-element"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/code&gt;</span><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"an-element"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span>"text"</span> <span class="nt"> /&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"an-element"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"an-element"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
 </code>
 </pre>
 
@@ -273,7 +274,7 @@
       <p>Embedding the <code>input</code> element within the <code>label</code> element, the <code>input</code> is implicitly connected to the <code>label</code>, eliminating the need for an <code>id</code> on the <code>input</code> as well as the <code>for</code> attribute on the <code>label</code>.</p>
 <pre rel="HTML" class="code">
 <code>
-<span class="nt">&lt;label&gt;</span>Search <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;label&gt;</span>Search <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span><span class="nt">&lt;/label&gt;</span>
 </code>
 </pre>
 
@@ -293,7 +294,8 @@
       <p>This method allows for the label to be something other than a <code>label</code> element.</p>
 <pre rel="HTML" class="code">
 <code>
-<span class="nt">&lt;input</span> <span class="na">aria-labelledby=</span><span class="s">"search-button"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span>"text"</span> <span class="nt"> /&gt;</span><span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"search-button"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/code&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">aria-labelledby=</span><span class="s">"search-button"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt"> /&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"search-button"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
 </code>
 </pre>
     </article>
@@ -309,8 +311,8 @@
 <pre rel="HTML" class="code">
 <code>
 <span class="nt">&lt;fieldset</span> <span class="na">aria-describedby=</span><span class="s">"date-hint"</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;</span>legend<span class="nt">&gt;</span>
-    <span class="nt">&lt;h3&gt;</span>When was your id issued?<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;legend&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>When was your ID issued?<span class="nt">&lt;/h3&gt;</span>
   <span class="nt">&lt;/legend&gt;</span>
   <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"date-hint"</span><span class="nt">&gt;</span>Example, 01 08 2007<span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
@@ -333,7 +335,7 @@
 <code>
 <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email address<span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"email-hint"</span><span class="nt">&gt;</span>Use official umn.edu address</span><span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">pattern=</span><span class="s">".+\@umn.edu$"</span> <span class="na">aria-describedby=</span><span class="s">"email-hint"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">pattern=</span><span class="s">".+\@umn.edu$"</span> <span class="na">aria-describedby=</span><span class="s">"email-hint"</span> <span class="nt">/&gt;</span>
 </code>
 </pre>
     </article>
@@ -344,9 +346,9 @@
 <pre rel="HTML" class="code">
 <code>
 <span class="nt">&lt;fieldset&gt;</span>
-  <span class="nt">&lt;legend&gt;</span>Section 1<span class="nt">&lt;/legend&gt;</span>
-  <span class="nt">&lt;label&gt;</span><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"option1"</span><span class="nt">&gt;</span>Option 1 <span class="nt">/&gt;</span><span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;label&gt;</span>Enter your text <span class="nt">&lt;input <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"entry1"</span><span class="nt">&gt;</span><span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;legend&gt;</span>Current status<span class="nt">&lt;/legend&gt;</span>
+  <span class="nt">&lt;label&gt;</span><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"option1"</span><span class="nt">&gt;</span>Employed?<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label&gt;</span>ID number <span class="nt">&lt;input <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"entry1"</span><span class="nt">&gt;</span><span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/fieldset&gt;</span>
 </code>
 </pre>
