@@ -219,6 +219,7 @@
       <h2>Usage</h2>
       <p>From <a href="https://rivet.iu.edu/components/overlays/alerts/" aria-describedby="ext-site">Rivet Design System Alerts</a></p>
       <p>Alerts are used to display brief important messages to users. They are designed to attract the user&rsquo;s attention, but not interrupt their work.</p>
+      <p>Load alerts via static HTML or server side scripting over javascript whenever possible. For dismissable alerts, do not auto remove; give people the ability to dismiss the alert. Dismissable alerts and alerts that are dynamically added to the content after page load must have appropriate accessibility attributes outlined below.</p>
       <h3>When to use</h3>
       <ul>
         <li>To notify people about system status including error, warnings, and updates.</li>
@@ -270,9 +271,11 @@
     <article>
       <h2>Code</h2>
       <h3>Page level messages</h3>
+      <p>Page level messages present at the top of the page below the header but above the main content area.</p>
 
+      <h4>Informational notice</h4>
       <div class="alert alert-info" role="alert" aria-labelledby="alert-title">
-        <h2 id="alert-title">Scheduled system maintenance</h2>
+        <h5 class="h2" id="alert-title">Scheduled system maintenance</h5>
         <p>The system will be unavailable August 1<sup>st</sup> due to scheduled system maintenance.</p>
       </div>
 
@@ -285,6 +288,8 @@
 </code>
 </pre>
 
+      <h4>Success notice</h4>
+      <p>Often a response to a form submission on a confirmation page. The message is a response to an action.</p>
       <div class="alert alert-success" role="alert" aria-labelledby="alert-title2">
         <h2 id="alert-title2">Thank you</h2>
         <p>We have received your request. Request status is available in My Account.</p>
@@ -299,6 +304,8 @@
 </code>
 </pre>
 
+      <h4>Warning notice</h4>
+      <p>Use for announcing scheduled outages and upcoming closures.</p>
       <div class="alert alert-warning" role="alert" aria-labelledby="alert-title3">
         <h2 id="alert-title3">Closing soon</h2>
         <p>The Library is closing soon. If you need assistance, go to a service desk.</p>
@@ -313,6 +320,8 @@
 </code>
 </pre>
 
+      <h4>Error notices</h4>
+      <p>This most commonly occurs with web forms, but it may also be applied to unplanned service failures.</p>
       <div class="alert alert-danger" role="alert" aria-labelledby="alert-title4">
         <h2 id="alert-title4">Errors</h2>
         <p>The form needs attention. Please enter the correct date.</p>
@@ -328,8 +337,9 @@
 </pre>
 
       <h3>Inline messages</h3>
-      <p>Use inline messages for form validation. In addition to the alert message, include an id for the input field to be described by.</p>
+      <p>Use inline messages for web form validation. In addition to the alert message, include an id for the input field to be described by.</p>
 
+      <h4>Informational inline alerts</h4>
       <p class="alert alert-inline alert-info">
         <svg class="glyph" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
         <g fill="currentColor">
@@ -356,6 +366,7 @@
 </code>
 </pre>
 
+      <h4>Success inline alerts</h4>
       <p class="alert alert-inline alert-success">
          <svg class="glyph" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
          <g fill="currentColor">
@@ -380,6 +391,7 @@
 </code>
 </pre>
 
+      <h4>Warning inline alerts</h4>
       <p class="alert alert-inline alert-warning">
          <svg class="glyph" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
           <g fill="currentColor">
@@ -404,6 +416,7 @@
 </code>
 </pre>
 
+      <h4>Error inline alerts</h4>
       <p class="alert alert-inline alert-danger">
         <svg class="glyph" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
           <g fill="currentColor">
