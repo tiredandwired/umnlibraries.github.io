@@ -167,21 +167,59 @@
     <h1>Developer checklist</h1>
 
     <article>
-      <h2>Frameworks</h2>
+      <h2>Frameworks and build processes</h2>
       <ul class="list">
-        <li>Use frameworks sparingly; if possible, remove any unused features to reduce bulk</li>
+        <li>
+          <label><input type="checkbox" disabled />
+          Use frameworks sparingly; if possible, remove any unused features to reduce bulk</label>
+        </li>
+        <li>
+          <label><input type="checkbox" disabled />
+          Minify CSS and JS, and remove unused/redundant code</label>
+        </li>
       </ul>
 
       <h2>Page structure</h2>
       <ul class="list">
-        <li>Include <code>DOCTYPE</code> statement</li>
-        <li>Attribute a language to the entire page, i.e. <code>&lt;html lang="en-us"&gt;</code></li>
-        <li>Use [current page title] | [website name] for <code>&lt;title&gt;</code></li>
-        <li>All content inside <code>&lt;body&gt;</code> must be within a proper HTML region: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code></li>
-        <li>Each region
-        <li>The <code>&lt;h1&gt;</code> is the descriptive heading for the content on that page</li>
-        <li>Headings must be properly nested; do not use out of order to achieve styles, i.e. <code>&lt;h3&gt;</code> is nested below an <code>&lt;h2&gt;</code></li>
+        <li>
+          <label><input type="checkbox" disabled />
+          Include <code>DOCTYPE</code> statement</label>
+        </li>
+        <li>
+          <label><input type="checkbox" disabled />
+          Attribute a language to the entire page, i.e. <code>&lt;html lang="en-us"&gt;</code></label>
+        </li>
+        <li>
+          <label><input type="checkbox" disabled />
+          Use [current page title] | [website name] for <code>&lt;title&gt;</code></label>
+        </li>
+        <li>
+          <label><input type="checkbox" disabled />
+          All content inside <code>&lt;body&gt;</code> must be within a proper HTML region: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code></label>
+        </li>
+        <li>
+          <label><input type="checkbox" disabled />
+          Each region has an accessible label associated with it if more than one of that type of region is present, i.e. <code>&lt;nav aria-label="Main"&gt;</code> and <code>&lt;nav aria-label="Breadcrumbs"&gt;</code></label>
+        </li>
+        <li>
+          <label><input type="checkbox" disabled />
+          The <code>&lt;h1&gt;</code> is the descriptive heading for the content on that page</label>
+        </li>
+        <li>
+          <label><input type="checkbox" disabled />
+          Headings must be properly nested; do not use out of order to achieve styles, i.e. <code>&lt;h3&gt;</code> is nested below an <code>&lt;h2&gt;</code></label>
+        </li>
       </ul>
+
+      <h2>Inclusive design</h2>
+      <p>Adapted from <a href="https://github.com/Heydon/inclusive-design-checklist" aria-describedby="ext-site">Heydon Pickering&rsquo;s inclusive design checklist</a>.</p>
+      <ul class="lists">
+        <li>
+          <label><input type="checkbox" disabled />
+          Content must all be keyboard and screen reader navigable</label>
+        </li>
+      </ul>
+
 
     </article>
 
