@@ -38,3 +38,8 @@
   --h1-min: 3;
   --h1-max: 5;
 }
+
+/* browser adjusts height/width values to account for border/padding added */
+*, *::before, *::after {
+  box-sizing: border-box;
+}

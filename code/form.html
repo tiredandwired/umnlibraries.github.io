@@ -263,7 +263,7 @@
 
       <h4><code>&lt;label&gt;</code> + <code>&lt;input&gt;</code></h4>
       <p>The most traditional approach to pairing a <code>label</code> with an <code>input</code> is to give the <code>input</code> element a unique <code>id</code> that the <code>label</code> can refer to with the <code>for</code> attribute.</p>
-<pre rel="HTML" class="code">
+<pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"an-element"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"an-element"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
@@ -272,7 +272,7 @@
 
       <h4><code>&lt;input&gt;</code> embedded in <code>&lt;label&gt;</code></h4>
       <p>Embedding the <code>input</code> element within the <code>label</code> element, the <code>input</code> is implicitly connected to the <code>label</code>, eliminating the need for an <code>id</code> on the <code>input</code> as well as the <code>for</code> attribute on the <code>label</code>.</p>
-<pre rel="HTML" class="code">
+<pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;label&gt;</span>Search <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span><span class="nt">&lt;/label&gt;</span>
 </code>
@@ -284,7 +284,7 @@
       <h4>Screen reader only hidden label</h4>
       <p>Using <code>aria-label</code> is specifically for assistive technology to detect. Using this method is only suggested if the <code>input</code> has clear intent by its context, and even then one assumes people without visual impairment are able to interpret intent correctly.</p>
 
-<pre rel="HTML" class="code">
+<pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span> <span class="nt">/&gt;</span>
 </code>
@@ -292,7 +292,7 @@
 
       <h4><acronym>ARIA</acronym> to tie two elements together</h4>
       <p>This method allows for the label to be something other than a <code>label</code> element.</p>
-<pre rel="HTML" class="code">
+<pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;input</span> <span class="na">aria-labelledby=</span><span class="s">"search-button"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt"> /&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"search-button"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
@@ -308,7 +308,7 @@
 
       <h3>Input group instructions</h3>
       <p>Use a <code>fieldset</code> to group related <code>input</code> elements together, and use the <code>aria-describedby</code> attribute to indicate the element with instructions.</p>
-<pre rel="HTML" class="code">
+<pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;fieldset</span> <span class="na">aria-describedby=</span><span class="s">"date-hint"</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;legend&gt;</span>
@@ -331,7 +331,7 @@
 </pre>
 
       <h3>Instructions for single field</h3>
-<pre rel="HTML" class="code">
+<pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email address<span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"email-hint"</span><span class="nt">&gt;</span>Use official umn.edu address</span><span class="nt">&lt;/span&gt;</span>
@@ -343,7 +343,7 @@
     <article id="related">
       <h2>Related inputs</h2>
       <p>Group similar questions together with a useful heading using <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code>.</p>
-<pre rel="HTML" class="code">
+<pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;fieldset&gt;</span>
   <span class="nt">&lt;legend&gt;</span>Current status<span class="nt">&lt;/legend&gt;</span>
@@ -360,7 +360,7 @@
       <p>If all fields are required, state &ldquo;All fields are required&rdquo; at the beginning of the form.</p>
       <p>If logical, place all optional fields at the end of the form and label them &ldquo;(optional)&rdquo;. More importantly, if the field is optional, consider whether it is necessary to have on the form.</p>
       <p>To identify required fields, use the following code:</p>
-<pre rel="HTML" class="code">
+<pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;p&gt;</span>* All fields marked with an asterisk are <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"req-hint"</span><span class="nt">&gt;</span>required<span class="nt">&lt;/span&gt;</span>.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;label</span> <span class="na">aria-describedby=</span><span class="s">"req-hint"</span><span class="nt">&gt;</span>Name <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;&lt;/label&gt;</span>
@@ -475,7 +475,7 @@
       <h2>Multi-page forms</h2>
       <p>For pages with “previous” and “next”, use hyperlinks where possible with appropriate hyperlink markup.</p>
       <h3>Paging</h3>
-<pre rel="HTML" class="code">
+<pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page1"</span> <span class="na">rel=</span><span class="s">"prev"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;</span> | <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page3"</span> <span class="na">rel=</span><span class="s">"next"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;</span>
 </code>

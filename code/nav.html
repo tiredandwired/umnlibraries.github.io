@@ -220,7 +220,7 @@
       <p>Navigation is easily managed with the <code>&lt;nav&gt;</code> element, where the person is on the homepage.</p>
 
       <p>When more than one <code>&lt;nav&gt;</code> element exists on a page, it must include the <code>aria-label</code> or <code>aria-labelledby</code> attribute to differentiate all the <code>&lt;nav&gt;</code> elements. For the main navigation of the site, the value of <code>aria-label</code> is <code>"Main"</code>.</p>
-<pre rel="HTML" class="code">
+<pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;nav</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">aria-label=</span><span class="s">"Main"</span><span class="nt">&gt;</span>
  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
@@ -238,7 +238,7 @@
       <h2>Breadcrumbs</h2>
       <p>All pages except the homepage has breadcrumbs on websites. For single page applications, use breadcrumbs if feasible and adds meaning (improves understanding and the application supports save states).</p>
       <p>Breadcrumbs are hierarchically ordered information architecture, whether representative of a file structure or a virtual structure. Use an ordered list to present it. Breadcrumb navigations are identified with <code>aria-label="Breadcrumb"</code>.</p>
-<pre rel="HTML" class="code">
+<pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;nav</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">aria-label=</span><span class="s">"Breadcrumb"</span><span class="nt">&gt;</span>
  <span class="nt">&lt;ol&gt</span>
@@ -258,7 +258,7 @@
 
       <p>A submenu follows the same pattern as the other navigations. If a submenu link item has an additional breakdown, use an unordered list <code>&lt;ul&gt;</code> for the links.</p>
 
-<pre rel="HTML" class="code">
+<pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;nav</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">aria-label=</span><span class="s">"Content"</span><span class="nt">&gt;</span>
  <span class="nt">&lt;ul&gt</span>
@@ -277,13 +277,26 @@
       <p>Minimally, provide one primary &ldquo;skip to main content&rdquo; link on every page as the first item within the <code>&lt;body&gt;</code> element.</p>
       <p>If the page contains an extraordinary amount of content and links, consider adding one or two more &ldquo;skip&rdquo; links to the primary task areas of the content. For instance, on a search results page, the &ldquo;skip&rdquo; links might be &ldquo;skip to search results&rdquo; and &ldquo;skip to search box&rdquo;.</p>
 
-<pre rel="HTML" class="code">
+<pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#main"</span> <span class="na">class=</span><span class="s">"skip-link"</span><span class="nt">&gt;</span>Skip to main content<span class="nt">&lt;/a&gt;</span>
 </code>
 </pre>
 
       <p>The &ldquo;skip&rdquo; links may be used by visual or non-visual people, either with keyboards, screen readers, or other assistive technology. Because some people may be sighted, ensure the links are visible on focus.</p>
+    </article>
+
+    <article id="pagination">
+      <h2>Pagination</h2>
+      <p>Pagination is used for navigating a list of results. It is constructed of a series of links.</p>
+      <nav role="navigation" aria-label="Results">
+        <a href="/page/1/" rel="prev">Previous</a>
+        <a href="/page/2/">2</a>
+        <a href="/page/3/" aria-page="current">3</a>
+        <a href="/page/4/">4</a>
+        <a href="/page/3/" rel="next">Next</a>
+        <a href="/page/9/">Last</a>
+      </nav>
     </article>
 
   </main>
